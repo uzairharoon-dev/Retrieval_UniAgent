@@ -1,0 +1,71 @@
+{
+  "dataset": "retrieval-de-spot-check",
+  "source_order_nDCG@10": 0.6978557852142875,
+  "document_id_tiebreak_nDCG@10": 0.4803033149247912,
+  "affected_queries": {
+    "1": {
+      "source_order": 0.31546487678572877,
+      "document_id_order": 0.0
+    },
+    "2": {
+      "source_order": 1.0,
+      "document_id_order": 0.43067655807339306
+    },
+    "3": {
+      "source_order": 0.5,
+      "document_id_order": 0.3562071871080222
+    },
+    "4": {
+      "source_order": 1.0,
+      "document_id_order": 0.43067655807339306
+    },
+    "5": {
+      "source_order": 1.0,
+      "document_id_order": 0.43067655807339306
+    },
+    "11": {
+      "source_order": 1.0,
+      "document_id_order": 0.6309297535714575
+    },
+    "12": {
+      "source_order": 1.0,
+      "document_id_order": 0.6309297535714575
+    },
+    "14": {
+      "source_order": 1.0,
+      "document_id_order": 0.6309297535714575
+    },
+    "15": {
+      "source_order": 0.6309297535714575,
+      "document_id_order": 0.5
+    },
+    "22": {
+      "source_order": 0.5,
+      "document_id_order": 0.43067655807339306
+    },
+    "24": {
+      "source_order": 1.0,
+      "document_id_order": 0.6309297535714575
+    },
+    "25": {
+      "source_order": 1.0,
+      "document_id_order": 0.6309297535714575
+    },
+    "31": {
+      "source_order": 1.0,
+      "document_id_order": 0.43067655807339306
+    },
+    "32": {
+      "source_order": 0.5,
+      "document_id_order": 0.3562071871080222
+    },
+    "34": {
+      "source_order": 0.5,
+      "document_id_order": 0.3562071871080222
+    },
+    "35": {
+      "source_order": 1.0,
+      "document_id_order": 0.6309297535714575
+    }
+  }
+}

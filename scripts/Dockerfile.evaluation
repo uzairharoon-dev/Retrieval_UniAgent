@@ -1,0 +1,4 @@
+FROM uniagent-task1-bm25:baseline
+
+# Required by the organizers' TIRA retrieval evaluator.
+RUN pip3 install --no-cache-dir trectools==0.0.50
