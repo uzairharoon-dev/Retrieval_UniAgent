@@ -1,0 +1,654 @@
+{
+  "tokenizer_max_term_length": 20,
+  "query_token_loss": [
+    {
+      "dataset": "retrieval-de-spot-check",
+      "qid": "37",
+      "query": "Zeitschriften der Universitätsbibliothek",
+      "overlong_terms": [
+        "Universitätsbibliothek"
+      ],
+      "tokenizer_output": [
+        "zeitschriften",
+        "der"
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "2",
+      "query": "Reisekostenerstattung nach HRKG",
+      "overlong_terms": [
+        "Reisekostenerstattung"
+      ],
+      "tokenizer_output": [
+        "nach",
+        "hrkg"
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "7",
+      "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+      "overlong_terms": [
+        "Wegstreckenentschädigung"
+      ],
+      "tokenizer_output": [
+        "eigenes",
+        "auto",
+        "dienstreise"
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "9",
+      "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+      "overlong_terms": [
+        "Verwaltungsvorschriften"
+      ],
+      "tokenizer_output": [
+        "reisekostengesetz",
+        "hessen"
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "11",
+      "query": "Unfallversicherungsschutz Sturz Hotelzimmer Dienstreise",
+      "overlong_terms": [
+        "Unfallversicherungsschutz"
+      ],
+      "tokenizer_output": [
+        "sturz",
+        "hotelzimmer",
+        "dienstreise"
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "13",
+      "query": "Widerruf Dienstreisegenehmigung Vertrauensschutz",
+      "overlong_terms": [
+        "Dienstreisegenehmigung"
+      ],
+      "tokenizer_output": [
+        "widerruf",
+        "vertrauensschutz"
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "15",
+      "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+      "overlong_terms": [
+        "Fahrtkostenerstattung",
+        "Personalratsmitglieder"
+      ],
+      "tokenizer_output": [
+        "hrkg"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "dataset": "retrieval-de-spot-check",
+      "qid": "1",
+      "query": "Dienstreiseantrag",
+      "tokenizer_output": [
+        "dienstreiseantrag"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "dienstreiseantrag"
+      ],
+      "documents": [
+        {
+          "doc_id": "32bc169e-4d0b-4931-9b72-bf425ec7311b",
+          "rank": 11,
+          "words": 5593,
+          "title": "Dienstreisemanagement - INTERN - Uni Kassel",
+          "query_term_counts": {
+            "dienstreiseantrag": 3
+          },
+          "vehicle_or_separation_terms": {
+            "kraftfahrzeug": 7
+          }
+        },
+        {
+          "doc_id": "d464e7eb-9c66-4389-a370-8636d2450b2c",
+          "rank": 1,
+          "words": 481,
+          "title": "SAP ESS (Dienstreisemanagement) - ITS - Uni Kassel",
+          "query_term_counts": {
+            "dienstreiseantrag": 4
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-de-spot-check",
+      "qid": "23",
+      "query": "Vergaberegeln bei Beschaffungen",
+      "tokenizer_output": [
+        "vergaberegeln",
+        "bei",
+        "beschaffungen"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "vergaberegeln",
+        "beschaff"
+      ],
+      "documents": [
+        {
+          "doc_id": "e86172af-5ce4-4d18-ad59-d067308435af",
+          "rank": 19,
+          "words": 86,
+          "title": "Beschaffungsordnung / Vergaberechtliche Vorschriften - INTERN - Uni Kassel",
+          "query_term_counts": {
+            "vergaberegeln": 0,
+            "beschaff": 1
+          },
+          "vehicle_or_separation_terms": {}
+        },
+        {
+          "doc_id": "f5e22f1a-e0b7-44d7-9800-2346d2cc96de",
+          "rank": 1,
+          "words": 67,
+          "title": "Beschaffung mit SAP und WPS - INTERN - Uni Kassel",
+          "query_term_counts": {
+            "vergaberegeln": 0,
+            "beschaff": 5
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-de-spot-check",
+      "qid": "36",
+      "query": "Open-Access-Publikationsfonds",
+      "tokenizer_output": [
+        "open",
+        "access",
+        "publikationsfonds"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "open",
+        "access",
+        "publikationsfond"
+      ],
+      "documents": [
+        {
+          "doc_id": "79b644e7-63a0-4614-8ee3-01fa572961e2",
+          "rank": 20,
+          "words": 1111,
+          "title": "Open Access Zeitschriftenartikel - UB - Uni Kassel",
+          "query_term_counts": {
+            "open": 7,
+            "access": 7,
+            "publikationsfond": 1
+          },
+          "vehicle_or_separation_terms": {}
+        },
+        {
+          "doc_id": "bdfe1f2b-04dc-4fe5-a4a7-d1129b695756",
+          "rank": 1,
+          "words": 137,
+          "title": "Open Access Publikationsfonds - UB - Uni Kassel",
+          "query_term_counts": {
+            "open": 7,
+            "access": 7,
+            "publikationsfond": 4
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-de-spot-check",
+      "qid": "39",
+      "query": "Büromöbel wiederverwenden",
+      "tokenizer_output": [
+        "büromöbel",
+        "wiederverwenden"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "buromobel",
+        "wiederverw"
+      ],
+      "documents": [
+        {
+          "doc_id": "4935851c-1fd2-42d7-9dd2-5ec69da22caa",
+          "rank": 17,
+          "words": 1846,
+          "title": "Nachhaltigkeit A-Z - UNI",
+          "query_term_counts": {
+            "buromobel": 2,
+            "wiederverw": 0
+          },
+          "vehicle_or_separation_terms": {
+            "trennung": 1
+          }
+        },
+        {
+          "doc_id": "d77dfceb-6a56-42aa-9360-c98e59f7a4a8",
+          "rank": 1,
+          "words": 131,
+          "title": "Einzeltermin (Startseite) - HOCHSCHULVERWALTUNG",
+          "query_term_counts": {
+            "buromobel": 2,
+            "wiederverw": 0
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-de-spot-check",
+      "qid": "40",
+      "query": "Softwarelizenzen beschaffen",
+      "tokenizer_output": [
+        "softwarelizenzen",
+        "beschaffen"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "softwarelizenz",
+        "beschaff"
+      ],
+      "documents": [
+        {
+          "doc_id": "281e3856-4b49-4ce3-b88b-5d4b8f31819f",
+          "rank": 21,
+          "words": 72,
+          "title": "Software-/ Campuslizenzen - INTERN - Uni Kassel",
+          "query_term_counts": {
+            "softwarelizenz": 0,
+            "beschaff": 1
+          },
+          "vehicle_or_separation_terms": {}
+        },
+        {
+          "doc_id": "aa198d07-6d99-4acc-a43a-a247f0f76331",
+          "rank": 1,
+          "words": 38,
+          "title": "Software - EECS - Uni Kassel",
+          "query_term_counts": {
+            "softwarelizenz": 1,
+            "beschaff": 0
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-en-spot-check",
+      "qid": "16",
+      "query": "Consumables in funded research projects",
+      "tokenizer_output": [
+        "consumables",
+        "in",
+        "funded",
+        "research",
+        "projects"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "consum",
+        "in",
+        "fund",
+        "research",
+        "project"
+      ],
+      "documents": [
+        {
+          "doc_id": "58ff50ed-9bf3-4388-9697-a120fd6b3223",
+          "rank": 81,
+          "words": 4252,
+          "title": "4. project implementation - INTERN - Uni Kassel",
+          "query_term_counts": {
+            "consum": 2,
+            "in": 79,
+            "fund": 156,
+            "research": 8,
+            "project": 109
+          },
+          "vehicle_or_separation_terms": {
+            "consum": 2
+          }
+        },
+        {
+          "doc_id": "772690c5-b073-4601-a1c9-793d9bee1797",
+          "rank": 1,
+          "words": 232,
+          "title": "Consumers and agroforestry systems - FB11AGRAR - Uni Kassel",
+          "query_term_counts": {
+            "consum": 7,
+            "in": 8,
+            "fund": 2,
+            "research": 1,
+            "project": 1
+          },
+          "vehicle_or_separation_terms": {
+            "consum": 7
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-en-spot-check",
+      "qid": "47",
+      "query": "Value-added tax on invoices",
+      "tokenizer_output": [
+        "value",
+        "added",
+        "tax",
+        "on",
+        "invoices"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "valu",
+        "ad",
+        "tax",
+        "on",
+        "invoic"
+      ],
+      "documents": [
+        {
+          "doc_id": "262f0c3e-54d6-4d88-bcf4-d1dfac0b3546",
+          "rank": 19,
+          "words": 8810,
+          "title": "Glossary third-party funding management - INTERN - Uni Kassel",
+          "query_term_counts": {
+            "valu": 3,
+            "ad": 2,
+            "tax": 11,
+            "on": 59,
+            "invoic": 11
+          },
+          "vehicle_or_separation_terms": {
+            "consum": 4
+          }
+        },
+        {
+          "doc_id": "cbda7996-464b-49f2-8bb9-c5c0c83cc1d7",
+          "rank": 1,
+          "words": 1268,
+          "title": "Open Access Journal Articles - UB - Uni Kassel",
+          "query_term_counts": {
+            "valu": 2,
+            "ad": 2,
+            "tax": 3,
+            "on": 8,
+            "invoic": 15
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "1",
+      "query": "Definition Dienstreise HRKG",
+      "tokenizer_output": [
+        "definition",
+        "dienstreise",
+        "hrkg"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "definition",
+        "dienstreis",
+        "hrkg"
+      ],
+      "documents": [
+        {
+          "doc_id": "jlr-NNLHE0000518BNN00000000004",
+          "rank": 30,
+          "words": 225,
+          "title": " § 2 HRKG | Landesnorm Hessen | Dienstreisen | § 2 - Dienstreisen | gültig ab: 01.01.2010",
+          "query_term_counts": {
+            "definition": 0,
+            "dienstreis": 10,
+            "hrkg": 2
+          },
+          "vehicle_or_separation_terms": {}
+        },
+        {
+          "doc_id": "LARE190033800",
+          "rank": 1,
+          "words": 1381,
+          "title": "5 K 2475/11.GI | VG Gießen 5. Kammer | 08.05.2012 | Urteil",
+          "query_term_counts": {
+            "definition": 1,
+            "dienstreis": 13,
+            "hrkg": 10
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "2",
+      "query": "Reisekostenerstattung nach HRKG",
+      "tokenizer_output": [
+        "nach",
+        "hrkg"
+      ],
+      "overlong_query_terms": [
+        "Reisekostenerstattung"
+      ],
+      "stemmed_query_terms": [
+        "hrkg"
+      ],
+      "documents": [
+        {
+          "doc_id": "jlr-NNLHE0000518BNN00000000008",
+          "rank": 36,
+          "words": 293,
+          "title": " § 4 HRKG | Landesnorm Hessen | Reisekostenerstattung | § 4 - Reisekostenerstattung | gültig ab: 29.11.2024",
+          "query_term_counts": {
+            "hrkg": 3
+          },
+          "vehicle_or_separation_terms": {}
+        },
+        {
+          "doc_id": "LARE200000353",
+          "rank": 1,
+          "words": 3005,
+          "title": "1 K 2889/18.KS | VG Kassel 1. Berichterstatter | 14.02.2020 | Urteil",
+          "query_term_counts": {
+            "hrkg": 38
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "7",
+      "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+      "tokenizer_output": [
+        "eigenes",
+        "auto",
+        "dienstreise"
+      ],
+      "overlong_query_terms": [
+        "Wegstreckenentschädigung"
+      ],
+      "stemmed_query_terms": [
+        "eig",
+        "auto",
+        "dienstreis"
+      ],
+      "documents": [
+        {
+          "doc_id": "jlr-NNLHE0000518BNN00000000013",
+          "rank": 148,
+          "words": 329,
+          "title": " § 6 HRKG | Landesnorm Hessen | Wegstrecken- und Mitnahmeentschädigung | § 6 - Wegstrecken- und Mitnahmeentschädigung | gültig ab: 01.01.2021",
+          "query_term_counts": {
+            "eig": 0,
+            "auto": 0,
+            "dienstreis": 4
+          },
+          "vehicle_or_separation_terms": {
+            "wegstreck": 5,
+            "kraftfahrzeug": 6
+          }
+        },
+        {
+          "doc_id": "LARE190033914",
+          "rank": 1,
+          "words": 4184,
+          "title": "5 K 2902/12.GI | VG Gießen 5. Kammer | 01.08.2013 | Urteil",
+          "query_term_counts": {
+            "eig": 2,
+            "auto": 2,
+            "dienstreis": 12
+          },
+          "vehicle_or_separation_terms": {
+            "kraftfahrzeug": 3,
+            "wegstreck": 2
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "8",
+      "query": "Trennungsgeld Hessen Verordnung",
+      "tokenizer_output": [
+        "trennungsgeld",
+        "hessen",
+        "verordnung"
+      ],
+      "overlong_query_terms": [],
+      "stemmed_query_terms": [
+        "trennungsgeld",
+        "hess",
+        "verordn"
+      ],
+      "documents": [
+        {
+          "doc_id": "jlr-NNLHE00005393",
+          "rank": null,
+          "words": 42,
+          "title": "  HTGV | Landesnorm Hessen | Hessische Trennungsgeldverordnung (HTGV) vom 20. Oktober 2011 | gültig ab: 01.01.2012",
+          "query_term_counts": {
+            "trennungsgeld": 0,
+            "hess": 1,
+            "verordn": 0
+          },
+          "vehicle_or_separation_terms": {}
+        },
+        {
+          "doc_id": "LARE260000096",
+          "rank": 1,
+          "words": 2488,
+          "title": "3 K 1002/23.WI | VG Wiesbaden 3. Kammer | 10.03.2025 | Urteil",
+          "query_term_counts": {
+            "trennungsgeld": 24,
+            "hess": 0,
+            "verordn": 2
+          },
+          "vehicle_or_separation_terms": {
+            "trennungsgeld": 24,
+            "trennungsreisegeld": 1,
+            "trennungsreis": 1,
+            "trennungstagegeld": 1
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "9",
+      "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+      "tokenizer_output": [
+        "reisekostengesetz",
+        "hessen"
+      ],
+      "overlong_query_terms": [
+        "Verwaltungsvorschriften"
+      ],
+      "stemmed_query_terms": [
+        "reisekostengesetz",
+        "hess"
+      ],
+      "documents": [
+        {
+          "doc_id": "VVHE-VVHE000013868",
+          "rank": 492,
+          "words": 5572,
+          "title": "Ministerium des Innern, für Sicherheit und Heimatschutz | Verwaltungsvorschrift (Hessen) | Verwaltungsvorschriften zum Hessischen Reisekostengesetz (VV-HRKG) | i. d. F. v. 28.12.2016 | gültig ab 01.01.2017",
+          "query_term_counts": {
+            "reisekostengesetz": 3,
+            "hess": 2
+          },
+          "vehicle_or_separation_terms": {
+            "kraftfahrzeug": 12
+          }
+        },
+        {
+          "doc_id": "LARE190034436",
+          "rank": 1,
+          "words": 2166,
+          "title": "1 K 718/10.KS | VG Kassel 1. Kammer | 21.12.2010 | Urteil",
+          "query_term_counts": {
+            "reisekostengesetz": 8,
+            "hess": 0
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "qid": "15",
+      "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+      "tokenizer_output": [
+        "hrkg"
+      ],
+      "overlong_query_terms": [
+        "Fahrtkostenerstattung",
+        "Personalratsmitglieder"
+      ],
+      "stemmed_query_terms": [
+        "hrkg"
+      ],
+      "documents": [
+        {
+          "doc_id": "LARE190028396",
+          "rank": 96,
+          "words": 4058,
+          "title": "22 TL 1699/05 | Hessischer Verwaltungsgerichtshof 22. Senat | 29.06.2006 | Beschluss",
+          "query_term_counts": {
+            "hrkg": 5
+          },
+          "vehicle_or_separation_terms": {
+            "trennungsgeld": 12,
+            "wegstreck": 1,
+            "trennung": 1
+          }
+        },
+        {
+          "doc_id": "LARE200000353",
+          "rank": 1,
+          "words": 3005,
+          "title": "1 K 2889/18.KS | VG Kassel 1. Berichterstatter | 14.02.2020 | Urteil",
+          "query_term_counts": {
+            "hrkg": 38
+          },
+          "vehicle_or_separation_terms": {}
+        }
+      ]
+    }
+  ],
+  "note": "English content-word counts include stopwords; these are token/stem diagnostics, not BM25 score attribution."
+}

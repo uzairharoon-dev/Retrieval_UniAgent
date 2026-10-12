@@ -7,6 +7,10 @@ the provided documents, retrieves a ranked list for each query, and writes
 The initial run completed on all three datasets. Results, validation, and the
 German score tie-ordering explanation are in [reports/BASELINE.md](reports/BASELINE.md).
 
+Phase 3 is complete. [reports/PHASE3.md](reports/PHASE3.md) documents token loss,
+duplicate pages, vocabulary mismatches, all 13 cases outside the top ten, and
+the priorities for the next experiments.
+
 ## Run the baseline
 
 Start Docker Desktop, then run from PowerShell:
@@ -59,7 +63,8 @@ on these small datasets do not establish performance on the private test set.
 
 ## Next milestone
 
-Inspect per-query failures before changing retrieval. Compare each change
+Phase 4: first test retaining long German tokens in indexing and queries.
+Compare each change
 against this baseline, recording both effectiveness and resource use. A real
 TIRA submission requires participant registration and a separate dry run;
 running this script does not submit anything.

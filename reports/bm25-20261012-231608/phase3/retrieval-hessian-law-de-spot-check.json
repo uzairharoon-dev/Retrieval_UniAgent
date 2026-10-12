@@ -3,6 +3,7 @@
   "summary": {
     "documents": 2829,
     "queries": 15,
+    "query_ranks_cross_checked_against_baseline_AP": 15,
     "rank_buckets": {
       "rank_11_100": 3,
       "rank_1_10": 9,

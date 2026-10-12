@@ -2,6 +2,7 @@
 import argparse
 import gzip
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -22,13 +23,14 @@ with gzip.open(root / "runs" / args.run_name / "phase3-evidence.jsonl.gz", "rt",
         selected[(document["dataset"], document["doc_id"])] = document
 
 reports = []
+query_token_loss = []
 for dataset_name, language in (("retrieval-de-spot-check", "de"), ("retrieval-en-spot-check", "en"),
                                ("retrieval-hessian-law-de-spot-check", "de")):
     audit = json.loads((root / "reports" / args.run_name / "phase3" / f"{dataset_name}.json").read_text())
     tokeniser = pt.TerrierTokeniser.java_tokeniser(RETRIEVAL_CONFIGURATION[language]["tokeniser"])
-    stemmer_class = RETRIEVAL_CONFIGURATION[language]["stemmer"].value
-    stemmer = pt.java.autoclass(f"org.terrier.terms.{stemmer_class}")(None)
+    stemmer = RETRIEVAL_CONFIGURATION[language]["stemmer"]
     stopwords = set(RETRIEVAL_CONFIGURATION[language]["stopwords"]) if language == "de" else set()
+    max_term_length = int(pt.java.autoclass("org.terrier.utility.ApplicationSetup").MAX_TERM_LENGTH)
 
     def terms(text):
         # English stopwords are not removed here; the targeted diagnostics use content words.
@@ -36,6 +38,12 @@ for dataset_name, language in (("retrieval-de-spot-check", "de"), ("retrieval-en
                        if str(token).lower() not in stopwords)
 
     for query in audit["queries"]:
+        raw_tokens = [str(token) for token in tokeniser.getTokens(query["query"])]
+        overlong = [term for term in re.findall(r"\w+", query["query"]) if len(term) > max_term_length]
+        if overlong:
+            query_token_loss.append({"dataset": dataset_name, "qid": query["qid"],
+                                     "query": query["query"], "overlong_terms": overlong,
+                                     "tokenizer_output": raw_tokens})
         if query["bucket"] == "rank_1_10":
             continue
         query_terms = terms(query["query"])
@@ -48,7 +56,10 @@ for dataset_name, language in (("retrieval-de-spot-check", "de"), ("retrieval-en
                          "vehicle_or_separation_terms": {term: count for term, count in counts.items()
                                                           if any(part in term for part in ("trennung", "kraftfahr", "wegstreck", "consum"))}})
         reports.append({"dataset": dataset_name, "qid": query["qid"], "query": query["query"],
+                        "tokenizer_output": raw_tokens, "overlong_query_terms": overlong,
                         "stemmed_query_terms": list(query_terms), "documents": docs})
 output = root / "reports" / args.run_name / "phase3/term-diagnostics.json"
-output.write_text(json.dumps(reports, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-print(json.dumps(reports, indent=2, ensure_ascii=False))
+result = {"tokenizer_max_term_length": max_term_length, "query_token_loss": query_token_loss,
+          "cases": reports, "note": "English content-word counts include stopwords; these are token/stem diagnostics, not BM25 score attribution."}
+output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+print(json.dumps({"tokenizer_max_term_length": max_term_length, "query_token_loss": query_token_loss}, indent=2, ensure_ascii=False))
