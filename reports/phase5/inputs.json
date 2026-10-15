@@ -1,0 +1,32 @@
+﻿[
+    {
+        "sha256":  "ffe0ad5335325104d194dcdcd1b621dca7c2294bd10a10c30e10f74e2905c776",
+        "file":  "documents.jsonl.gz",
+        "dataset":  "retrieval-de-spot-check"
+    },
+    {
+        "sha256":  "adc93546c8763701cf391438d37074424a33783700bdf575aa137f8c9dbcc1b1",
+        "file":  "queries.jsonl",
+        "dataset":  "retrieval-de-spot-check"
+    },
+    {
+        "sha256":  "506b5f991213612da9bc15e9be4a20c9317f6290a4d762571856298c83c4ba1f",
+        "file":  "documents.jsonl.gz",
+        "dataset":  "retrieval-en-spot-check"
+    },
+    {
+        "sha256":  "cf7a62ba0a2ae20c7cdf1ac1f6eb2caaad31061cf3d194d52ff2eb758ef20e31",
+        "file":  "queries.jsonl",
+        "dataset":  "retrieval-en-spot-check"
+    },
+    {
+        "sha256":  "be85a679609e3f19ca92cc7539bebb9e95c4b441d2140fe4adf31f0ff1e7b6fb",
+        "file":  "documents.jsonl.gz",
+        "dataset":  "retrieval-hessian-law-de-spot-check"
+    },
+    {
+        "sha256":  "899f135ae2828415eead069620c2077041e0ab48872cb339d5f7430a6f26ed86",
+        "file":  "queries.jsonl",
+        "dataset":  "retrieval-hessian-law-de-spot-check"
+    }
+]

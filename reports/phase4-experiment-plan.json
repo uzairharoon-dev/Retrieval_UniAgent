@@ -1,0 +1,22 @@
+{
+  "scope": "Remaining Phase 4 development experiments, fixed before their full evaluations",
+  "runs": [
+    {"name": "phase4-compound", "mode": "compound", "reference": "phase4-long-tokens-64"},
+    {"name": "phase4-deduplicated", "mode": "deduplicated", "reference": "phase4-compound"},
+    {"name": "phase4-passages", "mode": "passages", "reference": "phase4-compound"}
+  ],
+  "compound": {
+    "lexicon_source": "provided document text only",
+    "min_document_frequency": 5,
+    "min_part_length": 4,
+    "max_parts": 2,
+    "source_word_length_range": [10, 64],
+    "keep_original_term": true,
+    "linking_elements": ["", "s", "es", "en", "e", "er", "n"]
+  },
+  "duplicates": {"grouping": "exact source-text SHA256", "preserve_original_document_ids": true},
+  "passages": {"words": 300, "stride": 200, "retain_full_document": true, "aggregation": "maximum score", "candidate_depth": 5000},
+  "ranking": {"document_depth": 1000, "ties": "descending document ID"},
+  "development_recommendation": "Compare equal-weight mean nDCG@10 across the three corpora, mean Recall@100, per-query regressions, and runtime; report tradeoffs rather than claim universal improvement.",
+  "stop_condition": "All three experiments evaluated on all three corpora, comparisons and limitations documented, candidate recommended for Phase 5. No parameter sweep or external model work in this phase."
+}

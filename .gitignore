@@ -2,3 +2,17 @@ vendor/
 runs/
 __pycache__/
 .pytest_cache/
+
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+.tira/
+.tira-settings.json
+.docker/
+
+# Local Python environments and generated files
+.venv/
+venv/
+*.py[cod]
+*.log

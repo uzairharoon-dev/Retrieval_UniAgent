@@ -1,0 +1,1657 @@
+{
+  "phase": 4,
+  "status": "development experiments complete",
+  "recommendation_rule": "equal-weight corpus mean nDCG@10, then mean Recall@100; final selection is Phase 5",
+  "recommended_for_phase5": "phase4-passages",
+  "runs": [
+    {
+      "run": "bm25-20261012-231608",
+      "corpora": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "metrics": {
+            "R@100": 1.0,
+            "AP": 0.3886659965421576,
+            "nDCG@10": 0.4803033149247912
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.6978557852142875
+          }
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "metrics": {
+            "R@100": 1.0,
+            "AP": 0.7163133760326744,
+            "nDCG@10": 0.7627470478957658
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.7627470478957656
+          }
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "metrics": {
+            "AP": 0.3415449465144587,
+            "R@100": 0.8,
+            "nDCG@10": 0.39998854723445265
+          },
+          "queries": 15,
+          "official_evaluation": {
+            "nDCG@10": 0.39998854723445265
+          }
+        }
+      ],
+      "macro_nDCG@10": 0.5476796366850032,
+      "query_weighted_nDCG@10": 0.5704013427543188,
+      "macro_Recall@100": 0.9333333333333332,
+      "improved_queries": [],
+      "regressed_queries": []
+    },
+    {
+      "run": "phase4-long-tokens-64",
+      "corpora": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "metrics": {
+            "AP": 0.37558907346523457,
+            "nDCG@10": 0.4603033149247912,
+            "R@100": 0.96
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.6778557852142875
+          }
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "metrics": {
+            "nDCG@10": 0.7627470478957658,
+            "R@100": 1.0,
+            "AP": 0.7163133760326744
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.7627470478957656
+          }
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "metrics": {
+            "nDCG@10": 0.5779952300406208,
+            "R@100": 0.9333333333333333,
+            "AP": 0.5185473785473785
+          },
+          "queries": 15,
+          "official_evaluation": {
+            "nDCG@10": 0.5779952300406208
+          }
+        }
+      ],
+      "macro_nDCG@10": 0.6003485309537259,
+      "query_weighted_nDCG@10": 0.6037875003249729,
+      "macro_Recall@100": 0.9644444444444445,
+      "improved_queries": [
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "2",
+          "query": "Reisekostenerstattung nach HRKG",
+          "baseline_rank": 36,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "7",
+          "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+          "baseline_rank": 148,
+          "rank": 11
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "9",
+          "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+          "baseline_rank": 492,
+          "rank": 9
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "11",
+          "query": "Unfallversicherungsschutz Sturz Hotelzimmer Dienstreise",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "15",
+          "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+          "baseline_rank": 96,
+          "rank": 1
+        }
+      ],
+      "regressed_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "37",
+          "query": "Zeitschriften der Universitätsbibliothek",
+          "baseline_rank": 3,
+          "rank": 156
+        }
+      ]
+    },
+    {
+      "run": "phase4-rrf60-isolated",
+      "corpora": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "metrics": {
+            "nDCG@10": 0.46030331492479115,
+            "R@100": 1.0,
+            "AP": 0.3789690268451878
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.46030331492479104
+          }
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "metrics": {
+            "R@100": 1.0,
+            "AP": 0.7163133760326743,
+            "nDCG@10": 0.7627470478957656
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.7627470478957656
+          }
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "metrics": {
+            "nDCG@10": 0.42459323032968876,
+            "R@100": 0.9333333333333333,
+            "AP": 0.3842358905888318
+          },
+          "queries": 15,
+          "official_evaluation": {
+            "nDCG@10": 0.42459323032968876
+          }
+        }
+      ],
+      "macro_nDCG@10": 0.5492145310500819,
+      "query_weighted_nDCG@10": 0.5683870388532193,
+      "macro_Recall@100": 0.9777777777777779,
+      "improved_queries": [
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "11",
+          "query": "Unfallversicherungsschutz Sturz Hotelzimmer Dienstreise",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "15",
+          "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+          "baseline_rank": 96,
+          "rank": 25
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "2",
+          "query": "Reisekostenerstattung nach HRKG",
+          "baseline_rank": 36,
+          "rank": 11
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "7",
+          "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+          "baseline_rank": 148,
+          "rank": 37
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "9",
+          "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+          "baseline_rank": 492,
+          "rank": 34
+        }
+      ],
+      "regressed_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "37",
+          "query": "Zeitschriften der Universitätsbibliothek",
+          "baseline_rank": 3,
+          "rank": 11
+        }
+      ]
+    },
+    {
+      "run": "phase4-compound",
+      "corpora": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "metrics": {
+            "R@100": 1.0,
+            "nDCG@10": 0.5108333174783241,
+            "AP": 0.39714580369843533
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.510833317478324
+          }
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "metrics": {
+            "R@100": 1.0,
+            "nDCG@10": 0.7627470478957656,
+            "AP": 0.7163133760326743
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.7627470478957656
+          }
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "metrics": {
+            "AP": 0.5216109808604737,
+            "nDCG@10": 0.5845952928594804,
+            "R@100": 0.9333333333333333
+          },
+          "queries": 15,
+          "official_evaluation": {
+            "nDCG@10": 0.5845952928594804
+          }
+        }
+      ],
+      "macro_nDCG@10": 0.6193918860778567,
+      "query_weighted_nDCG@10": 0.624745208111453,
+      "macro_Recall@100": 0.9777777777777779,
+      "improved_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "1",
+          "query": "Dienstreiseantrag",
+          "baseline_rank": 11,
+          "rank": 5
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "22",
+          "query": "Beschaffungsordnung",
+          "baseline_rank": 4,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "23",
+          "query": "Vergaberegeln bei Beschaffungen",
+          "baseline_rank": 19,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "3",
+          "query": "Dienstreise mit Privatreise verbinden",
+          "baseline_rank": 6,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "34",
+          "query": "Abschlag auf Reisekosten",
+          "baseline_rank": 6,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "36",
+          "query": "Open-Access-Publikationsfonds",
+          "baseline_rank": 20,
+          "rank": 16
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "40",
+          "query": "Softwarelizenzen beschaffen",
+          "baseline_rank": 21,
+          "rank": 10
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "11",
+          "query": "Unfallversicherungsschutz Sturz Hotelzimmer Dienstreise",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "15",
+          "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+          "baseline_rank": 96,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "2",
+          "query": "Reisekostenerstattung nach HRKG",
+          "baseline_rank": 36,
+          "rank": 2
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "3",
+          "query": "Flugkosten Dienstreise Hessen",
+          "baseline_rank": 7,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "6",
+          "query": "Auslandsdienstreise Hessen Regelungen",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "7",
+          "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+          "baseline_rank": 148,
+          "rank": 7
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "8",
+          "query": "Trennungsgeld Hessen Verordnung",
+          "baseline_rank": null,
+          "rank": 203
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "9",
+          "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+          "baseline_rank": 492,
+          "rank": 33
+        }
+      ],
+      "regressed_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "21",
+          "query": "Endgeräte beschaffen",
+          "baseline_rank": 1,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "25",
+          "query": "Rechnungsempfänger Universität Kassel",
+          "baseline_rank": 2,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "37",
+          "query": "Zeitschriften der Universitätsbibliothek",
+          "baseline_rank": 3,
+          "rank": 74
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "39",
+          "query": "Büromöbel wiederverwenden",
+          "baseline_rank": 17,
+          "rank": 19
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "1",
+          "query": "Definition Dienstreise HRKG",
+          "baseline_rank": 30,
+          "rank": 34
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "12",
+          "query": "Tagegeld auswärtige Tätigkeit Dienststätte HRKG",
+          "baseline_rank": 5,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "run": "phase4-deduplicated",
+      "corpora": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "metrics": {
+            "nDCG@10": 0.5108333174783241,
+            "AP": 0.3971115922718188,
+            "R@100": 1.0
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.510833317478324
+          }
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "metrics": {
+            "AP": 0.7344070961718019,
+            "nDCG@10": 0.7757569077193531,
+            "R@100": 1.0
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.7757569077193532
+          }
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "metrics": {
+            "nDCG@10": 0.5845952928594804,
+            "R@100": 0.9333333333333333,
+            "AP": 0.5216109808604737
+          },
+          "queries": 15,
+          "official_evaluation": {
+            "nDCG@10": 0.5845952928594804
+          }
+        }
+      ],
+      "macro_nDCG@10": 0.6237285060190526,
+      "query_weighted_nDCG@10": 0.6297490003512943,
+      "macro_Recall@100": 0.9777777777777779,
+      "improved_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "1",
+          "query": "Dienstreiseantrag",
+          "baseline_rank": 11,
+          "rank": 5
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "22",
+          "query": "Beschaffungsordnung",
+          "baseline_rank": 4,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "23",
+          "query": "Vergaberegeln bei Beschaffungen",
+          "baseline_rank": 19,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "3",
+          "query": "Dienstreise mit Privatreise verbinden",
+          "baseline_rank": 6,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "34",
+          "query": "Abschlag auf Reisekosten",
+          "baseline_rank": 6,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "36",
+          "query": "Open-Access-Publikationsfonds",
+          "baseline_rank": 20,
+          "rank": 16
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "40",
+          "query": "Softwarelizenzen beschaffen",
+          "baseline_rank": 21,
+          "rank": 10
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "41",
+          "query": "Visa and entry requirements",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "47",
+          "query": "Value-added tax on invoices",
+          "baseline_rank": 19,
+          "rank": 18
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "11",
+          "query": "Unfallversicherungsschutz Sturz Hotelzimmer Dienstreise",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "15",
+          "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+          "baseline_rank": 96,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "2",
+          "query": "Reisekostenerstattung nach HRKG",
+          "baseline_rank": 36,
+          "rank": 2
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "3",
+          "query": "Flugkosten Dienstreise Hessen",
+          "baseline_rank": 7,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "6",
+          "query": "Auslandsdienstreise Hessen Regelungen",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "7",
+          "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+          "baseline_rank": 148,
+          "rank": 7
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "8",
+          "query": "Trennungsgeld Hessen Verordnung",
+          "baseline_rank": null,
+          "rank": 203
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "9",
+          "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+          "baseline_rank": 492,
+          "rank": 33
+        }
+      ],
+      "regressed_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "21",
+          "query": "Endgeräte beschaffen",
+          "baseline_rank": 1,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "25",
+          "query": "Rechnungsempfänger Universität Kassel",
+          "baseline_rank": 2,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "37",
+          "query": "Zeitschriften der Universitätsbibliothek",
+          "baseline_rank": 3,
+          "rank": 79
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "39",
+          "query": "Büromöbel wiederverwenden",
+          "baseline_rank": 17,
+          "rank": 19
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "16",
+          "query": "Consumables in funded research projects",
+          "baseline_rank": 81,
+          "rank": 85
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "44",
+          "query": "Sustainable business trips",
+          "baseline_rank": 4,
+          "rank": 5
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "1",
+          "query": "Definition Dienstreise HRKG",
+          "baseline_rank": 30,
+          "rank": 34
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "12",
+          "query": "Tagegeld auswärtige Tätigkeit Dienststätte HRKG",
+          "baseline_rank": 5,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "run": "phase4-passages",
+      "corpora": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "metrics": {
+            "nDCG@10": 0.4654319258215858,
+            "AP": 0.3690609746688954,
+            "R@100": 0.96
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.46543192582158566
+          }
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "metrics": {
+            "R@100": 1.0,
+            "AP": 0.8323809523809522,
+            "nDCG@10": 0.8742820939047665
+          },
+          "queries": 25,
+          "official_evaluation": {
+            "nDCG@10": 0.8742820939047665
+          }
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "metrics": {
+            "R@100": 0.9333333333333333,
+            "nDCG@10": 0.6608481470522789,
+            "AP": 0.5996025379848909
+          },
+          "queries": 15,
+          "official_evaluation": {
+            "nDCG@10": 0.6608481470522789
+          }
+        }
+      ],
+      "macro_nDCG@10": 0.6668540555928771,
+      "query_weighted_nDCG@10": 0.6677780415222,
+      "macro_Recall@100": 0.9644444444444445,
+      "improved_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "1",
+          "query": "Dienstreiseantrag",
+          "baseline_rank": 11,
+          "rank": 7
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "22",
+          "query": "Beschaffungsordnung",
+          "baseline_rank": 4,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "23",
+          "query": "Vergaberegeln bei Beschaffungen",
+          "baseline_rank": 19,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "3",
+          "query": "Dienstreise mit Privatreise verbinden",
+          "baseline_rank": 6,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "32",
+          "query": "Mietwagen bei Dienstreisen",
+          "baseline_rank": 6,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "34",
+          "query": "Abschlag auf Reisekosten",
+          "baseline_rank": 6,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "36",
+          "query": "Open-Access-Publikationsfonds",
+          "baseline_rank": 20,
+          "rank": 11
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "40",
+          "query": "Softwarelizenzen beschaffen",
+          "baseline_rank": 21,
+          "rank": 12
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "16",
+          "query": "Consumables in funded research projects",
+          "baseline_rank": 81,
+          "rank": 7
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "19",
+          "query": "Unapproved project expenses",
+          "baseline_rank": 7,
+          "rank": 2
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "29",
+          "query": "Single-source procurement justification",
+          "baseline_rank": 4,
+          "rank": 2
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "41",
+          "query": "Visa and entry requirements",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "42",
+          "query": "Travel expense advances",
+          "baseline_rank": 6,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "44",
+          "query": "Sustainable business trips",
+          "baseline_rank": 4,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "46",
+          "query": "Hospitality expenses from third-party funds",
+          "baseline_rank": 3,
+          "rank": 2
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "47",
+          "query": "Value-added tax on invoices",
+          "baseline_rank": 19,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "7",
+          "query": "Eligible project expenses",
+          "baseline_rank": 5,
+          "rank": 3
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "1",
+          "query": "Definition Dienstreise HRKG",
+          "baseline_rank": 30,
+          "rank": 16
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "12",
+          "query": "Tagegeld auswärtige Tätigkeit Dienststätte HRKG",
+          "baseline_rank": 5,
+          "rank": 2
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "15",
+          "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+          "baseline_rank": 96,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "2",
+          "query": "Reisekostenerstattung nach HRKG",
+          "baseline_rank": 36,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "3",
+          "query": "Flugkosten Dienstreise Hessen",
+          "baseline_rank": 7,
+          "rank": 5
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "4",
+          "query": "Übernachtungsgeld HRKG",
+          "baseline_rank": 5,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "5",
+          "query": "Dienstreise mit Privatreise verbinden HRKG",
+          "baseline_rank": 2,
+          "rank": 1
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "7",
+          "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+          "baseline_rank": 148,
+          "rank": 7
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "8",
+          "query": "Trennungsgeld Hessen Verordnung",
+          "baseline_rank": null,
+          "rank": 187
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "9",
+          "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+          "baseline_rank": 492,
+          "rank": 1
+        }
+      ],
+      "regressed_queries": [
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "14",
+          "query": "Originalbelege für Kostenerstattung",
+          "baseline_rank": 2,
+          "rank": 7
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "21",
+          "query": "Endgeräte beschaffen",
+          "baseline_rank": 1,
+          "rank": 20
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "35",
+          "query": "Bewirtungskosten erstatten",
+          "baseline_rank": 2,
+          "rank": 4
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "37",
+          "query": "Zeitschriften der Universitätsbibliothek",
+          "baseline_rank": 3,
+          "rank": 101
+        },
+        {
+          "dataset": "retrieval-de-spot-check",
+          "qid": "39",
+          "query": "Büromöbel wiederverwenden",
+          "baseline_rank": 17,
+          "rank": 25
+        },
+        {
+          "dataset": "retrieval-en-spot-check",
+          "qid": "43",
+          "query": "Business trip application",
+          "baseline_rank": 1,
+          "rank": 2
+        },
+        {
+          "dataset": "retrieval-hessian-law-de-spot-check",
+          "qid": "6",
+          "query": "Auslandsdienstreise Hessen Regelungen",
+          "baseline_rank": 2,
+          "rank": 3
+        }
+      ]
+    }
+  ],
+  "query_ranks": {
+    "retrieval-de-spot-check/1": {
+      "query": "Dienstreiseantrag",
+      "ranks": {
+        "bm25-20261012-231608": 11,
+        "phase4-long-tokens-64": 11,
+        "phase4-rrf60-isolated": 11,
+        "phase4-compound": 5,
+        "phase4-deduplicated": 5,
+        "phase4-passages": 7
+      }
+    },
+    "retrieval-de-spot-check/2": {
+      "query": "Übernachtungskosten bei Dienstreisen",
+      "ranks": {
+        "bm25-20261012-231608": 4,
+        "phase4-long-tokens-64": 4,
+        "phase4-rrf60-isolated": 4,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/3": {
+      "query": "Dienstreise mit Privatreise verbinden",
+      "ranks": {
+        "bm25-20261012-231608": 6,
+        "phase4-long-tokens-64": 6,
+        "phase4-rrf60-isolated": 6,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/4": {
+      "query": "A1-Bescheinigung für Dienstreisen",
+      "ranks": {
+        "bm25-20261012-231608": 4,
+        "phase4-long-tokens-64": 4,
+        "phase4-rrf60-isolated": 4,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/5": {
+      "query": "Flugkosten bei Dienstreisen",
+      "ranks": {
+        "bm25-20261012-231608": 4,
+        "phase4-long-tokens-64": 4,
+        "phase4-rrf60-isolated": 4,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/11": {
+      "query": "Erstattungsformular für private Auslagen",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 2,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-de-spot-check/12": {
+      "query": "Quittung für Kostenerstattung",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 2,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-de-spot-check/13": {
+      "query": "Microsoft Campuslizenz beantragen",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-de-spot-check/14": {
+      "query": "Originalbelege für Kostenerstattung",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 2,
+        "phase4-passages": 7
+      }
+    },
+    "retrieval-de-spot-check/15": {
+      "query": "Privat verauslagte Kosten abrechnen",
+      "ranks": {
+        "bm25-20261012-231608": 3,
+        "phase4-long-tokens-64": 3,
+        "phase4-rrf60-isolated": 3,
+        "phase4-compound": 3,
+        "phase4-deduplicated": 3,
+        "phase4-passages": 3
+      }
+    },
+    "retrieval-de-spot-check/21": {
+      "query": "Endgeräte beschaffen",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 3,
+        "phase4-deduplicated": 3,
+        "phase4-passages": 20
+      }
+    },
+    "retrieval-de-spot-check/22": {
+      "query": "Beschaffungsordnung",
+      "ranks": {
+        "bm25-20261012-231608": 4,
+        "phase4-long-tokens-64": 4,
+        "phase4-rrf60-isolated": 4,
+        "phase4-compound": 3,
+        "phase4-deduplicated": 3,
+        "phase4-passages": 3
+      }
+    },
+    "retrieval-de-spot-check/23": {
+      "query": "Vergaberegeln bei Beschaffungen",
+      "ranks": {
+        "bm25-20261012-231608": 19,
+        "phase4-long-tokens-64": 19,
+        "phase4-rrf60-isolated": 19,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-de-spot-check/24": {
+      "query": "Datenschutzkonformer KI-Dienst",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 2,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-de-spot-check/25": {
+      "query": "Rechnungsempfänger Universität Kassel",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 3,
+        "phase4-deduplicated": 3,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-de-spot-check/31": {
+      "query": "Private Kosten bei Dienstreisen",
+      "ranks": {
+        "bm25-20261012-231608": 4,
+        "phase4-long-tokens-64": 4,
+        "phase4-rrf60-isolated": 4,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/32": {
+      "query": "Mietwagen bei Dienstreisen",
+      "ranks": {
+        "bm25-20261012-231608": 6,
+        "phase4-long-tokens-64": 6,
+        "phase4-rrf60-isolated": 6,
+        "phase4-compound": 6,
+        "phase4-deduplicated": 6,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/33": {
+      "query": "Reisezeit als Arbeitszeit",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-de-spot-check/34": {
+      "query": "Abschlag auf Reisekosten",
+      "ranks": {
+        "bm25-20261012-231608": 6,
+        "phase4-long-tokens-64": 6,
+        "phase4-rrf60-isolated": 6,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/35": {
+      "query": "Bewirtungskosten erstatten",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 2,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-de-spot-check/36": {
+      "query": "Open-Access-Publikationsfonds",
+      "ranks": {
+        "bm25-20261012-231608": 20,
+        "phase4-long-tokens-64": 20,
+        "phase4-rrf60-isolated": 20,
+        "phase4-compound": 16,
+        "phase4-deduplicated": 16,
+        "phase4-passages": 11
+      }
+    },
+    "retrieval-de-spot-check/37": {
+      "query": "Zeitschriften der Universitätsbibliothek",
+      "ranks": {
+        "bm25-20261012-231608": 3,
+        "phase4-long-tokens-64": 156,
+        "phase4-rrf60-isolated": 11,
+        "phase4-compound": 74,
+        "phase4-deduplicated": 79,
+        "phase4-passages": 101
+      }
+    },
+    "retrieval-de-spot-check/38": {
+      "query": "Ergonomischer Büroarbeitsplatz",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-de-spot-check/39": {
+      "query": "Büromöbel wiederverwenden",
+      "ranks": {
+        "bm25-20261012-231608": 17,
+        "phase4-long-tokens-64": 17,
+        "phase4-rrf60-isolated": 17,
+        "phase4-compound": 19,
+        "phase4-deduplicated": 19,
+        "phase4-passages": 25
+      }
+    },
+    "retrieval-de-spot-check/40": {
+      "query": "Softwarelizenzen beschaffen",
+      "ranks": {
+        "bm25-20261012-231608": 21,
+        "phase4-long-tokens-64": 21,
+        "phase4-rrf60-isolated": 21,
+        "phase4-compound": 10,
+        "phase4-deduplicated": 10,
+        "phase4-passages": 12
+      }
+    },
+    "retrieval-en-spot-check/6": {
+      "query": "Business travel expense reports",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/7": {
+      "query": "Eligible project expenses",
+      "ranks": {
+        "bm25-20261012-231608": 5,
+        "phase4-long-tokens-64": 5,
+        "phase4-rrf60-isolated": 5,
+        "phase4-compound": 5,
+        "phase4-deduplicated": 5,
+        "phase4-passages": 3
+      }
+    },
+    "retrieval-en-spot-check/8": {
+      "query": "Documents for Erasmus staff mobility",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/9": {
+      "query": "Travel expenses from third-party funds",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/10": {
+      "query": "Business trip requests and approval",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/16": {
+      "query": "Consumables in funded research projects",
+      "ranks": {
+        "bm25-20261012-231608": 81,
+        "phase4-long-tokens-64": 81,
+        "phase4-rrf60-isolated": 81,
+        "phase4-compound": 81,
+        "phase4-deduplicated": 85,
+        "phase4-passages": 7
+      }
+    },
+    "retrieval-en-spot-check/17": {
+      "query": "Invoice checking and approval",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/18": {
+      "query": "Electronic invoice receipt",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/19": {
+      "query": "Unapproved project expenses",
+      "ranks": {
+        "bm25-20261012-231608": 7,
+        "phase4-long-tokens-64": 7,
+        "phase4-rrf60-isolated": 7,
+        "phase4-compound": 7,
+        "phase4-deduplicated": 7,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-en-spot-check/20": {
+      "query": "Invoice processing workflow",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/26": {
+      "query": "Procurement of end devices",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/27": {
+      "query": "Public procurement regulations",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/28": {
+      "query": "Website accessibility requirements",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/29": {
+      "query": "Single-source procurement justification",
+      "ranks": {
+        "bm25-20261012-231608": 4,
+        "phase4-long-tokens-64": 4,
+        "phase4-rrf60-isolated": 4,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-en-spot-check/30": {
+      "query": "SAP WPS goods ordering system",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/41": {
+      "query": "Visa and entry requirements",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/42": {
+      "query": "Travel expense advances",
+      "ranks": {
+        "bm25-20261012-231608": 6,
+        "phase4-long-tokens-64": 6,
+        "phase4-rrf60-isolated": 6,
+        "phase4-compound": 6,
+        "phase4-deduplicated": 6,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/43": {
+      "query": "Business trip application",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-en-spot-check/44": {
+      "query": "Sustainable business trips",
+      "ranks": {
+        "bm25-20261012-231608": 4,
+        "phase4-long-tokens-64": 4,
+        "phase4-rrf60-isolated": 4,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 5,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/45": {
+      "query": "Software and campus licenses",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/46": {
+      "query": "Hospitality expenses from third-party funds",
+      "ranks": {
+        "bm25-20261012-231608": 3,
+        "phase4-long-tokens-64": 3,
+        "phase4-rrf60-isolated": 3,
+        "phase4-compound": 3,
+        "phase4-deduplicated": 3,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-en-spot-check/47": {
+      "query": "Value-added tax on invoices",
+      "ranks": {
+        "bm25-20261012-231608": 19,
+        "phase4-long-tokens-64": 19,
+        "phase4-rrf60-isolated": 19,
+        "phase4-compound": 19,
+        "phase4-deduplicated": 18,
+        "phase4-passages": 3
+      }
+    },
+    "retrieval-en-spot-check/48": {
+      "query": "Procurement of large research equipment",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/49": {
+      "query": "Software license procurement",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-en-spot-check/50": {
+      "query": "University procurement order process",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/1": {
+      "query": "Definition Dienstreise HRKG",
+      "ranks": {
+        "bm25-20261012-231608": 30,
+        "phase4-long-tokens-64": 30,
+        "phase4-rrf60-isolated": 30,
+        "phase4-compound": 34,
+        "phase4-deduplicated": 34,
+        "phase4-passages": 16
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/2": {
+      "query": "Reisekostenerstattung nach HRKG",
+      "ranks": {
+        "bm25-20261012-231608": 36,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 11,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 2,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/3": {
+      "query": "Flugkosten Dienstreise Hessen",
+      "ranks": {
+        "bm25-20261012-231608": 7,
+        "phase4-long-tokens-64": 7,
+        "phase4-rrf60-isolated": 7,
+        "phase4-compound": 4,
+        "phase4-deduplicated": 4,
+        "phase4-passages": 5
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/4": {
+      "query": "Übernachtungsgeld HRKG",
+      "ranks": {
+        "bm25-20261012-231608": 5,
+        "phase4-long-tokens-64": 5,
+        "phase4-rrf60-isolated": 5,
+        "phase4-compound": 5,
+        "phase4-deduplicated": 5,
+        "phase4-passages": 4
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/5": {
+      "query": "Dienstreise mit Privatreise verbinden HRKG",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 2,
+        "phase4-deduplicated": 2,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/6": {
+      "query": "Auslandsdienstreise Hessen Regelungen",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 2,
+        "phase4-rrf60-isolated": 2,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 3
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/7": {
+      "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+      "ranks": {
+        "bm25-20261012-231608": 148,
+        "phase4-long-tokens-64": 11,
+        "phase4-rrf60-isolated": 37,
+        "phase4-compound": 7,
+        "phase4-deduplicated": 7,
+        "phase4-passages": 7
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/8": {
+      "query": "Trennungsgeld Hessen Verordnung",
+      "ranks": {
+        "bm25-20261012-231608": null,
+        "phase4-long-tokens-64": null,
+        "phase4-rrf60-isolated": null,
+        "phase4-compound": 203,
+        "phase4-deduplicated": 203,
+        "phase4-passages": 187
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/9": {
+      "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+      "ranks": {
+        "bm25-20261012-231608": 492,
+        "phase4-long-tokens-64": 9,
+        "phase4-rrf60-isolated": 34,
+        "phase4-compound": 33,
+        "phase4-deduplicated": 33,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/10": {
+      "query": "Rückforderung überzahlter Reisekosten Landrat",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/11": {
+      "query": "Unfallversicherungsschutz Sturz Hotelzimmer Dienstreise",
+      "ranks": {
+        "bm25-20261012-231608": 2,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/12": {
+      "query": "Tagegeld auswärtige Tätigkeit Dienststätte HRKG",
+      "ranks": {
+        "bm25-20261012-231608": 5,
+        "phase4-long-tokens-64": 5,
+        "phase4-rrf60-isolated": 5,
+        "phase4-compound": 6,
+        "phase4-deduplicated": 6,
+        "phase4-passages": 2
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/13": {
+      "query": "Widerruf Dienstreisegenehmigung Vertrauensschutz",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/14": {
+      "query": "Schadensersatz zu Unrecht erstattete Bewirtungskosten",
+      "ranks": {
+        "bm25-20261012-231608": 1,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 1,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    },
+    "retrieval-hessian-law-de-spot-check/15": {
+      "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+      "ranks": {
+        "bm25-20261012-231608": 96,
+        "phase4-long-tokens-64": 1,
+        "phase4-rrf60-isolated": 25,
+        "phase4-compound": 1,
+        "phase4-deduplicated": 1,
+        "phase4-passages": 1
+      }
+    }
+  },
+  "balanced_alternative_for_phase5": "phase4-deduplicated",
+  "limitation": "Development selection on synthetic, single-positive spot-check judgments; no held-out generalisation claim."
+}

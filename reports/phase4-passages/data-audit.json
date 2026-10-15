@@ -1,0 +1,105 @@
+[
+  {
+    "dataset": "retrieval-de-spot-check",
+    "documents": 30983,
+    "queries": 25,
+    "judged_queries": 25,
+    "judgments": 25,
+    "relevant_query_document_pairs": 25,
+    "languages": [
+      "de"
+    ],
+    "document_fields": [
+      "content",
+      "doc_id",
+      "language",
+      "text",
+      "title",
+      "url"
+    ],
+    "sample_query": {
+      "qid": 1,
+      "query": "Dienstreiseantrag",
+      "original_query": {
+        "language": "de",
+        "description": "Wie beantrage ich eine Dienstreise?",
+        "narrative": "Relevant sind Dokumente zum Dienstreiseantrag und zur Genehmigung vor Reiseantritt."
+      }
+    },
+    "sha256": {
+      "documents.jsonl.gz": "ffe0ad5335325104d194dcdcd1b621dca7c2294bd10a10c30e10f74e2905c776",
+      "queries.jsonl": "adc93546c8763701cf391438d37074424a33783700bdf575aa137f8c9dbcc1b1",
+      "qrels.txt": "15c36fd67d604f488066cf2b3910923c9d1457057d97a5cf8c12266f137a3bb3"
+    }
+  },
+  {
+    "dataset": "retrieval-en-spot-check",
+    "documents": 24171,
+    "queries": 25,
+    "judged_queries": 25,
+    "judgments": 25,
+    "relevant_query_document_pairs": 25,
+    "languages": [
+      "en"
+    ],
+    "document_fields": [
+      "content",
+      "doc_id",
+      "language",
+      "text",
+      "title",
+      "url"
+    ],
+    "sample_query": {
+      "qid": 6,
+      "query": "Business travel expense reports",
+      "original_query": {
+        "language": "en",
+        "description": "How do employees submit a business travel expense report?",
+        "narrative": "Relevant documents describe creating, submitting and processing travel expense reports."
+      }
+    },
+    "sha256": {
+      "documents.jsonl.gz": "506b5f991213612da9bc15e9be4a20c9317f6290a4d762571856298c83c4ba1f",
+      "queries.jsonl": "cf7a62ba0a2ae20c7cdf1ac1f6eb2caaad31061cf3d194d52ff2eb758ef20e31",
+      "qrels.txt": "1f42a5bf7164efcb59cb176ce9acb167da77a3448222e764d33309883f319f73"
+    }
+  },
+  {
+    "dataset": "retrieval-hessian-law-de-spot-check",
+    "documents": 2829,
+    "queries": 15,
+    "judged_queries": 15,
+    "judgments": 15,
+    "relevant_query_document_pairs": 15,
+    "languages": [
+      "de"
+    ],
+    "document_fields": [
+      "content",
+      "court",
+      "decision_date",
+      "doc_id",
+      "document_type",
+      "ecli",
+      "file_number",
+      "text",
+      "title",
+      "url"
+    ],
+    "sample_query": {
+      "qid": 1,
+      "query": "Definition Dienstreise HRKG",
+      "original_query": {
+        "language": "de",
+        "description": "Wann liegt eine Dienstreise im Sinne des Hessischen Reisekostengesetzes vor?",
+        "narrative": "Relevant ist § 2 HRKG zur Definition und Abgrenzung von Dienstreisen."
+      }
+    },
+    "sha256": {
+      "documents.jsonl.gz": "be85a679609e3f19ca92cc7539bebb9e95c4b441d2140fe4adf31f0ff1e7b6fb",
+      "queries.jsonl": "899f135ae2828415eead069620c2077041e0ab48872cb339d5f7430a6f26ed86",
+      "qrels.txt": "cc8a7e1585ee6d3805254d9c55c065c1d4ee9ba2d725162085fcd9ed425dddad"
+    }
+  }
+]

@@ -1,0 +1,198 @@
+{
+  "phase": 5,
+  "status": "complete",
+  "selected_mode": "passages",
+  "alternative_mode": "deduplicated",
+  "image_id": "sha256:5d63ddc26e69464b5e5a000eef8bc22b93d121941866c8da30b964c88c15173d",
+  "selection_rule": "equal-weight corpus mean nDCG@10, then mean Recall@100; final selection is Phase 5",
+  "entrypoint": [
+    "python3",
+    "/app/representation_system.py"
+  ],
+  "arguments": [
+    "--dataset",
+    "<input-directory>",
+    "--output",
+    "<output-directory>",
+    "--mode",
+    "passages"
+  ],
+  "held_out_evaluation": false,
+  "submitted": false,
+  "tests": "31 tests passed in this unchanged image build; image/source hashes checked",
+  "source_sha256": {
+    "baseline.py": "3b1682062c5c4c5f067ee2ea7b52b565b27067e61d2f3edb45afe3102362c9f6",
+    "fusion.py": "8b2996815aa167cae710aeb48f123fffc91c2feb602a3003c26598e4a2b6fc18",
+    "fusion_system.py": "46e87b9d6646d71774e63eea883a83e847e6859360b2f015229ba9d93844c5f4",
+    "german-stopwords.NOTICE": "7e98943f48db8a58e7be996bcbc8c45387d245cd2860d45f4cfe2b522675c314",
+    "german-stopwords.txt": "dd6a7250b82c4f70051219d106260eea8259e24c55fd27a2c1edc84a3a4bc192",
+    "representations.py": "6ba4acfffb43266d296056269e216aaa3e653c1318929b728dbdf11bd3097439",
+    "representation_system.py": "b3eb9d5978ecb1cccbcadba6039f105f61b31fd55ef91c2995044d984741c61f",
+    "test_baseline.py": "153b16fc3f7b602c4f77f4d03357488e0a82dc220988e4361f8e0508e3da76ad",
+    "test_fusion.py": "ea841a1cdabe56ab628fbcf92df247fbe2ece60e3bc323aa66fc2b07b3efc340",
+    "test_representations.py": "95f769a9292c6b31e3f0301c920087975a6b80dfea6550c20734d6e5eb713808",
+    "test_token_length.py": "f12541e33afef3bc764009dd0f876abd90931b6b1b872750ca48e9b42e62c8e6"
+  },
+  "validation": [
+    {
+      "run": "phase5-passages",
+      "dataset": "retrieval-de-spot-check",
+      "queries": 25,
+      "exact_decompressed_run_reproduced": true,
+      "all_source_ids_preserved": true,
+      "labels_excluded_from_retrieval": true,
+      "network": "none",
+      "memory_cap_bytes": 3221225472,
+      "swap_enabled": false,
+      "wall_seconds_including_container_startup": 214.1823517,
+      "depth_min": 27,
+      "depth_max": 1000,
+      "metrics": {
+        "nDCG@10": 0.4654319258215858,
+        "R@100": 0.96,
+        "AP": 0.3690609746688954
+      },
+      "official_nDCG@10": 0.46543192582158566
+    },
+    {
+      "run": "phase5-passages",
+      "dataset": "retrieval-en-spot-check",
+      "queries": 25,
+      "exact_decompressed_run_reproduced": true,
+      "all_source_ids_preserved": true,
+      "labels_excluded_from_retrieval": true,
+      "network": "none",
+      "memory_cap_bytes": 3221225472,
+      "swap_enabled": false,
+      "wall_seconds_including_container_startup": 128.9376301,
+      "depth_min": 1000,
+      "depth_max": 1000,
+      "metrics": {
+        "R@100": 1.0,
+        "nDCG@10": 0.8742820939047665,
+        "AP": 0.8323809523809522
+      },
+      "official_nDCG@10": 0.8742820939047665
+    },
+    {
+      "run": "phase5-passages",
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "queries": 15,
+      "exact_decompressed_run_reproduced": true,
+      "all_source_ids_preserved": true,
+      "labels_excluded_from_retrieval": true,
+      "network": "none",
+      "memory_cap_bytes": 3221225472,
+      "swap_enabled": false,
+      "wall_seconds_including_container_startup": 186.010182,
+      "depth_min": 827,
+      "depth_max": 1000,
+      "metrics": {
+        "nDCG@10": 0.6608481470522789,
+        "AP": 0.5996025379848909,
+        "R@100": 0.9333333333333333
+      },
+      "official_nDCG@10": 0.6608481470522789
+    },
+    {
+      "run": "phase5-deduplicated",
+      "dataset": "retrieval-de-spot-check",
+      "queries": 25,
+      "exact_decompressed_run_reproduced": true,
+      "all_source_ids_preserved": true,
+      "labels_excluded_from_retrieval": true,
+      "network": "none",
+      "memory_cap_bytes": 3221225472,
+      "swap_enabled": false,
+      "wall_seconds_including_container_startup": 88.9669852,
+      "depth_min": 27,
+      "depth_max": 1000,
+      "metrics": {
+        "R@100": 1.0,
+        "nDCG@10": 0.5108333174783241,
+        "AP": 0.3971115922718188
+      },
+      "official_nDCG@10": 0.510833317478324
+    },
+    {
+      "run": "phase5-deduplicated",
+      "dataset": "retrieval-en-spot-check",
+      "queries": 25,
+      "exact_decompressed_run_reproduced": true,
+      "all_source_ids_preserved": true,
+      "labels_excluded_from_retrieval": true,
+      "network": "none",
+      "memory_cap_bytes": 3221225472,
+      "swap_enabled": false,
+      "wall_seconds_including_container_startup": 42.196204099999996,
+      "depth_min": 1000,
+      "depth_max": 1000,
+      "metrics": {
+        "R@100": 1.0,
+        "AP": 0.7344070961718019,
+        "nDCG@10": 0.7757569077193531
+      },
+      "official_nDCG@10": 0.7757569077193532
+    },
+    {
+      "run": "phase5-deduplicated",
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "queries": 15,
+      "exact_decompressed_run_reproduced": true,
+      "all_source_ids_preserved": true,
+      "labels_excluded_from_retrieval": true,
+      "network": "none",
+      "memory_cap_bytes": 3221225472,
+      "swap_enabled": false,
+      "wall_seconds_including_container_startup": 53.514491299999996,
+      "depth_min": 1000,
+      "depth_max": 1000,
+      "metrics": {
+        "R@100": 0.9333333333333333,
+        "AP": 0.5216109808604737,
+        "nDCG@10": 0.5845952928594804
+      },
+      "official_nDCG@10": 0.5845952928594804
+    }
+  ],
+  "evaluator_comparison": [
+    {
+      "run": "bm25-20261012-231608",
+      "canonical_mean_nDCG@10": 0.5476796366850032,
+      "local_TIRA_mean_nDCG@10": 0.620197126781502
+    },
+    {
+      "run": "phase4-long-tokens-64",
+      "canonical_mean_nDCG@10": 0.6003485309537259,
+      "local_TIRA_mean_nDCG@10": 0.6728660210502246
+    },
+    {
+      "run": "phase4-rrf60-isolated",
+      "canonical_mean_nDCG@10": 0.5492145310500819,
+      "local_TIRA_mean_nDCG@10": 0.5492145310500818
+    },
+    {
+      "run": "phase4-compound",
+      "canonical_mean_nDCG@10": 0.6193918860778567,
+      "local_TIRA_mean_nDCG@10": 0.6193918860778567
+    },
+    {
+      "run": "phase4-deduplicated",
+      "canonical_mean_nDCG@10": 0.6237285060190526,
+      "local_TIRA_mean_nDCG@10": 0.6237285060190526
+    },
+    {
+      "run": "phase4-passages",
+      "canonical_mean_nDCG@10": 0.6668540555928771,
+      "local_TIRA_mean_nDCG@10": 0.6668540555928771
+    }
+  ],
+  "limitations": [
+    "Synthetic development qrels; no held-out generalisation claim.",
+    "Local TIRA file-order ties and canonical ir_measures ties rank systems differently.",
+    "Passages lowers German nDCG@10 and Recall@100 versus original baseline.",
+    "Container cap proves these six runs fit 3 GiB with no swap, not private-test scalability.",
+    "Default image entrypoint and local parent build chain still require Phase 6 packaging.",
+    "Mixed-language queries are unsupported, inherited from the official baseline."
+  ]
+}

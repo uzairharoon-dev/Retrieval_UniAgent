@@ -1,0 +1,69 @@
+{
+  "mapping_checks": [
+    {
+      "dataset": "retrieval-de-spot-check",
+      "mode": "compound",
+      "all_original_ids_preserved": true,
+      "source_documents": 30983,
+      "indexed_representations": 30983
+    },
+    {
+      "dataset": "retrieval-de-spot-check",
+      "mode": "deduplicated",
+      "all_original_ids_preserved": true,
+      "source_documents": 30983,
+      "indexed_representations": 25361
+    },
+    {
+      "dataset": "retrieval-de-spot-check",
+      "mode": "passages",
+      "all_original_ids_preserved": true,
+      "source_documents": 30983,
+      "indexed_representations": 72782
+    },
+    {
+      "dataset": "retrieval-en-spot-check",
+      "mode": "compound",
+      "all_original_ids_preserved": true,
+      "source_documents": 24171,
+      "indexed_representations": 24171
+    },
+    {
+      "dataset": "retrieval-en-spot-check",
+      "mode": "deduplicated",
+      "all_original_ids_preserved": true,
+      "source_documents": 24171,
+      "indexed_representations": 21297
+    },
+    {
+      "dataset": "retrieval-en-spot-check",
+      "mode": "passages",
+      "all_original_ids_preserved": true,
+      "source_documents": 24171,
+      "indexed_representations": 63061
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "mode": "compound",
+      "all_original_ids_preserved": true,
+      "source_documents": 2829,
+      "indexed_representations": 2829
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "mode": "deduplicated",
+      "all_original_ids_preserved": true,
+      "source_documents": 2829,
+      "indexed_representations": 2829
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "mode": "passages",
+      "all_original_ids_preserved": true,
+      "source_documents": 2829,
+      "indexed_representations": 52043
+    }
+  ],
+  "law_deduplication_noop_verified": true,
+  "english_compound_control_identical_scores": true
+}

@@ -1,0 +1,1310 @@
+{
+  "baseline": "phase4-rrf60-isolated",
+  "candidate": "phase4-passages",
+  "data_hashes_match": true,
+  "tie_convention": "ir_measures: descending document ID for equal scores",
+  "datasets": [
+    {
+      "dataset": "retrieval-de-spot-check",
+      "baseline_metrics": {
+        "nDCG@10": 0.46030331492479115,
+        "R@100": 1.0,
+        "AP": 0.3789690268451878
+      },
+      "candidate_metrics": {
+        "nDCG@10": 0.4654319258215858,
+        "AP": 0.3690609746688954,
+        "R@100": 0.96
+      },
+      "metric_deltas": {
+        "nDCG@10": 0.005128610896794672,
+        "R@100": -0.040000000000000036,
+        "AP": -0.00990805217629237
+      },
+      "baseline_official_evaluation": {
+        "nDCG@10": 0.46030331492479104
+      },
+      "candidate_official_evaluation": {
+        "nDCG@10": 0.46543192582158566
+      },
+      "improved_queries": 8,
+      "regressed_queries": 5,
+      "unchanged_queries": 12,
+      "same_source_rankings_and_scores": false,
+      "same_canonical_rankings": false,
+      "baseline_resources": {
+        "short": {
+          "index": {
+            "wallclock": "46277 ms",
+            "peak_ram_raw": 1458941
+          },
+          "retrieval": {
+            "wallclock": "726 ms",
+            "peak_ram_raw": 848867
+          }
+        },
+        "long": {
+          "index": {
+            "wallclock": "48180 ms",
+            "peak_ram_raw": 1465282
+          },
+          "retrieval": {
+            "wallclock": "836 ms",
+            "peak_ram_raw": 845832
+          }
+        },
+        "end_to_end_seconds": 129.65665347399954,
+        "fusion": {
+          "wallclock": "752 ms",
+          "peak_ram_raw": 134938
+        }
+      },
+      "candidate_resources": {
+        "index": {
+          "wallclock": "173740 ms",
+          "peak_ram_raw": 1390628
+        },
+        "retrieval": {
+          "wallclock": "4833 ms",
+          "peak_ram_raw": 708694
+        },
+        "end_to_end_seconds": 202.09589066999615
+      },
+      "per_query": [
+        {
+          "qid": "1",
+          "query": "Dienstreiseantrag",
+          "status": "improved",
+          "baseline_rank": 11,
+          "candidate_rank": 7,
+          "baseline_metrics": {
+            "AP": 0.09090909090909091,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.14285714285714285,
+            "R@100": 1.0,
+            "nDCG@10": 0.3333333333333333
+          }
+        },
+        {
+          "qid": "2",
+          "query": "Übernachtungskosten bei Dienstreisen",
+          "status": "unchanged",
+          "baseline_rank": 4,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "3",
+          "query": "Dienstreise mit Privatreise verbinden",
+          "status": "improved",
+          "baseline_rank": 6,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.16666666666666666,
+            "R@100": 1.0,
+            "nDCG@10": 0.3562071871080222
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "4",
+          "query": "A1-Bescheinigung für Dienstreisen",
+          "status": "unchanged",
+          "baseline_rank": 4,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "5",
+          "query": "Flugkosten bei Dienstreisen",
+          "status": "unchanged",
+          "baseline_rank": 4,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "11",
+          "query": "Erstattungsformular für private Auslagen",
+          "status": "unchanged",
+          "baseline_rank": 2,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "12",
+          "query": "Quittung für Kostenerstattung",
+          "status": "unchanged",
+          "baseline_rank": 2,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "13",
+          "query": "Microsoft Campuslizenz beantragen",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "14",
+          "query": "Originalbelege für Kostenerstattung",
+          "status": "regressed",
+          "baseline_rank": 2,
+          "candidate_rank": 7,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 0.14285714285714285,
+            "R@100": 1.0,
+            "nDCG@10": 0.3333333333333333
+          }
+        },
+        {
+          "qid": "15",
+          "query": "Privat verauslagte Kosten abrechnen",
+          "status": "unchanged",
+          "baseline_rank": 3,
+          "candidate_rank": 3,
+          "baseline_metrics": {
+            "AP": 0.3333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.5
+          },
+          "candidate_metrics": {
+            "AP": 0.3333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.5
+          }
+        },
+        {
+          "qid": "21",
+          "query": "Endgeräte beschaffen",
+          "status": "regressed",
+          "baseline_rank": 1,
+          "candidate_rank": 20,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 0.05,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          }
+        },
+        {
+          "qid": "22",
+          "query": "Beschaffungsordnung",
+          "status": "improved",
+          "baseline_rank": 4,
+          "candidate_rank": 3,
+          "baseline_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          },
+          "candidate_metrics": {
+            "AP": 0.3333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.5
+          }
+        },
+        {
+          "qid": "23",
+          "query": "Vergaberegeln bei Beschaffungen",
+          "status": "improved",
+          "baseline_rank": 19,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.05263157894736842,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "24",
+          "query": "Datenschutzkonformer KI-Dienst",
+          "status": "unchanged",
+          "baseline_rank": 2,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "25",
+          "query": "Rechnungsempfänger Universität Kassel",
+          "status": "unchanged",
+          "baseline_rank": 2,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "31",
+          "query": "Private Kosten bei Dienstreisen",
+          "status": "unchanged",
+          "baseline_rank": 4,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "32",
+          "query": "Mietwagen bei Dienstreisen",
+          "status": "improved",
+          "baseline_rank": 6,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.16666666666666666,
+            "R@100": 1.0,
+            "nDCG@10": 0.3562071871080222
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "33",
+          "query": "Reisezeit als Arbeitszeit",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "34",
+          "query": "Abschlag auf Reisekosten",
+          "status": "improved",
+          "baseline_rank": 6,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.16666666666666666,
+            "R@100": 1.0,
+            "nDCG@10": 0.3562071871080222
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "35",
+          "query": "Bewirtungskosten erstatten",
+          "status": "regressed",
+          "baseline_rank": 2,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "36",
+          "query": "Open-Access-Publikationsfonds",
+          "status": "improved",
+          "baseline_rank": 20,
+          "candidate_rank": 11,
+          "baseline_metrics": {
+            "AP": 0.05,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.09090909090909091,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          }
+        },
+        {
+          "qid": "37",
+          "query": "Zeitschriften der Universitätsbibliothek",
+          "status": "regressed",
+          "baseline_rank": 11,
+          "candidate_rank": 101,
+          "baseline_metrics": {
+            "AP": 0.09090909090909091,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.009900990099009901,
+            "R@100": 0.0,
+            "nDCG@10": 0.0
+          }
+        },
+        {
+          "qid": "38",
+          "query": "Ergonomischer Büroarbeitsplatz",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "39",
+          "query": "Büromöbel wiederverwenden",
+          "status": "regressed",
+          "baseline_rank": 17,
+          "candidate_rank": 25,
+          "baseline_metrics": {
+            "AP": 0.058823529411764705,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.04,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          }
+        },
+        {
+          "qid": "40",
+          "query": "Softwarelizenzen beschaffen",
+          "status": "improved",
+          "baseline_rank": 21,
+          "candidate_rank": 12,
+          "baseline_metrics": {
+            "AP": 0.047619047619047616,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.08333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-en-spot-check",
+      "baseline_metrics": {
+        "R@100": 1.0,
+        "AP": 0.7163133760326743,
+        "nDCG@10": 0.7627470478957656
+      },
+      "candidate_metrics": {
+        "R@100": 1.0,
+        "AP": 0.8323809523809522,
+        "nDCG@10": 0.8742820939047665
+      },
+      "metric_deltas": {
+        "R@100": 0.0,
+        "AP": 0.11606757634827791,
+        "nDCG@10": 0.11153504600900088
+      },
+      "baseline_official_evaluation": {
+        "nDCG@10": 0.7627470478957656
+      },
+      "candidate_official_evaluation": {
+        "nDCG@10": 0.8742820939047665
+      },
+      "improved_queries": 9,
+      "regressed_queries": 1,
+      "unchanged_queries": 15,
+      "same_source_rankings_and_scores": false,
+      "same_canonical_rankings": false,
+      "baseline_resources": {
+        "short": {
+          "index": {
+            "wallclock": "50376 ms",
+            "peak_ram_raw": 1278795
+          },
+          "retrieval": {
+            "wallclock": "1545 ms",
+            "peak_ram_raw": 798429
+          }
+        },
+        "end_to_end_seconds": 68.77657552500023,
+        "fusion": {
+          "wallclock": "886 ms",
+          "peak_ram_raw": 143319
+        }
+      },
+      "candidate_resources": {
+        "index": {
+          "wallclock": "139863 ms",
+          "peak_ram_raw": 973361
+        },
+        "retrieval": {
+          "wallclock": "6216 ms",
+          "peak_ram_raw": 619216
+        },
+        "end_to_end_seconds": 148.10344690200145
+      },
+      "per_query": [
+        {
+          "qid": "6",
+          "query": "Business travel expense reports",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "7",
+          "query": "Eligible project expenses",
+          "status": "improved",
+          "baseline_rank": 5,
+          "candidate_rank": 3,
+          "baseline_metrics": {
+            "AP": 0.2,
+            "R@100": 1.0,
+            "nDCG@10": 0.38685280723454163
+          },
+          "candidate_metrics": {
+            "AP": 0.3333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.5
+          }
+        },
+        {
+          "qid": "8",
+          "query": "Documents for Erasmus staff mobility",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "9",
+          "query": "Travel expenses from third-party funds",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "10",
+          "query": "Business trip requests and approval",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "16",
+          "query": "Consumables in funded research projects",
+          "status": "improved",
+          "baseline_rank": 81,
+          "candidate_rank": 7,
+          "baseline_metrics": {
+            "AP": 0.012345679012345678,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.14285714285714285,
+            "R@100": 1.0,
+            "nDCG@10": 0.3333333333333333
+          }
+        },
+        {
+          "qid": "17",
+          "query": "Invoice checking and approval",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "18",
+          "query": "Electronic invoice receipt",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "19",
+          "query": "Unapproved project expenses",
+          "status": "improved",
+          "baseline_rank": 7,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.14285714285714285,
+            "R@100": 1.0,
+            "nDCG@10": 0.3333333333333333
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "20",
+          "query": "Invoice processing workflow",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "26",
+          "query": "Procurement of end devices",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "27",
+          "query": "Public procurement regulations",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "28",
+          "query": "Website accessibility requirements",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "29",
+          "query": "Single-source procurement justification",
+          "status": "improved",
+          "baseline_rank": 4,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "30",
+          "query": "SAP WPS goods ordering system",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "41",
+          "query": "Visa and entry requirements",
+          "status": "improved",
+          "baseline_rank": 2,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "42",
+          "query": "Travel expense advances",
+          "status": "improved",
+          "baseline_rank": 6,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.16666666666666666,
+            "R@100": 1.0,
+            "nDCG@10": 0.3562071871080222
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "43",
+          "query": "Business trip application",
+          "status": "regressed",
+          "baseline_rank": 1,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "44",
+          "query": "Sustainable business trips",
+          "status": "improved",
+          "baseline_rank": 4,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "45",
+          "query": "Software and campus licenses",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "46",
+          "query": "Hospitality expenses from third-party funds",
+          "status": "improved",
+          "baseline_rank": 3,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.3333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.5
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "47",
+          "query": "Value-added tax on invoices",
+          "status": "improved",
+          "baseline_rank": 19,
+          "candidate_rank": 3,
+          "baseline_metrics": {
+            "AP": 0.05263157894736842,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.3333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.5
+          }
+        },
+        {
+          "qid": "48",
+          "query": "Procurement of large research equipment",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "49",
+          "query": "Software license procurement",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "50",
+          "query": "University procurement order process",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "retrieval-hessian-law-de-spot-check",
+      "baseline_metrics": {
+        "nDCG@10": 0.42459323032968876,
+        "R@100": 0.9333333333333333,
+        "AP": 0.3842358905888318
+      },
+      "candidate_metrics": {
+        "R@100": 0.9333333333333333,
+        "nDCG@10": 0.6608481470522789,
+        "AP": 0.5996025379848909
+      },
+      "metric_deltas": {
+        "nDCG@10": 0.23625491672259014,
+        "R@100": 0.0,
+        "AP": 0.21536664739605915
+      },
+      "baseline_official_evaluation": {
+        "nDCG@10": 0.42459323032968876
+      },
+      "candidate_official_evaluation": {
+        "nDCG@10": 0.6608481470522789
+      },
+      "improved_queries": 10,
+      "regressed_queries": 2,
+      "unchanged_queries": 3,
+      "same_source_rankings_and_scores": false,
+      "same_canonical_rankings": false,
+      "baseline_resources": {
+        "short": {
+          "index": {
+            "wallclock": "24273 ms",
+            "peak_ram_raw": 1086963
+          },
+          "retrieval": {
+            "wallclock": "698 ms",
+            "peak_ram_raw": 814088
+          }
+        },
+        "long": {
+          "index": {
+            "wallclock": "24336 ms",
+            "peak_ram_raw": 1035735
+          },
+          "retrieval": {
+            "wallclock": "823 ms",
+            "peak_ram_raw": 783048
+          }
+        },
+        "end_to_end_seconds": 80.34623227200063,
+        "fusion": {
+          "wallclock": "310 ms",
+          "peak_ram_raw": 132931
+        }
+      },
+      "candidate_resources": {
+        "index": {
+          "wallclock": "176126 ms",
+          "peak_ram_raw": 1322676
+        },
+        "retrieval": {
+          "wallclock": "3524 ms",
+          "peak_ram_raw": 667979
+        },
+        "end_to_end_seconds": 203.86416101200302
+      },
+      "per_query": [
+        {
+          "qid": "1",
+          "query": "Definition Dienstreise HRKG",
+          "status": "improved",
+          "baseline_rank": 30,
+          "candidate_rank": 16,
+          "baseline_metrics": {
+            "AP": 0.03333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.0625,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          }
+        },
+        {
+          "qid": "2",
+          "query": "Reisekostenerstattung nach HRKG",
+          "status": "improved",
+          "baseline_rank": 11,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.09090909090909091,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "3",
+          "query": "Flugkosten Dienstreise Hessen",
+          "status": "improved",
+          "baseline_rank": 7,
+          "candidate_rank": 5,
+          "baseline_metrics": {
+            "AP": 0.14285714285714285,
+            "R@100": 1.0,
+            "nDCG@10": 0.3333333333333333
+          },
+          "candidate_metrics": {
+            "AP": 0.2,
+            "R@100": 1.0,
+            "nDCG@10": 0.38685280723454163
+          }
+        },
+        {
+          "qid": "4",
+          "query": "Übernachtungsgeld HRKG",
+          "status": "improved",
+          "baseline_rank": 5,
+          "candidate_rank": 4,
+          "baseline_metrics": {
+            "AP": 0.2,
+            "R@100": 1.0,
+            "nDCG@10": 0.38685280723454163
+          },
+          "candidate_metrics": {
+            "AP": 0.25,
+            "R@100": 1.0,
+            "nDCG@10": 0.43067655807339306
+          }
+        },
+        {
+          "qid": "5",
+          "query": "Dienstreise mit Privatreise verbinden HRKG",
+          "status": "improved",
+          "baseline_rank": 2,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "6",
+          "query": "Auslandsdienstreise Hessen Regelungen",
+          "status": "regressed",
+          "baseline_rank": 2,
+          "candidate_rank": 3,
+          "baseline_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          },
+          "candidate_metrics": {
+            "AP": 0.3333333333333333,
+            "R@100": 1.0,
+            "nDCG@10": 0.5
+          }
+        },
+        {
+          "qid": "7",
+          "query": "Wegstreckenentschädigung eigenes Auto Dienstreise",
+          "status": "improved",
+          "baseline_rank": 37,
+          "candidate_rank": 7,
+          "baseline_metrics": {
+            "AP": 0.02702702702702703,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.14285714285714285,
+            "R@100": 1.0,
+            "nDCG@10": 0.3333333333333333
+          }
+        },
+        {
+          "qid": "8",
+          "query": "Trennungsgeld Hessen Verordnung",
+          "status": "improved",
+          "baseline_rank": null,
+          "candidate_rank": 187,
+          "baseline_metrics": {
+            "AP": 0.0,
+            "R@100": 0.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 0.0053475935828877,
+            "R@100": 0.0,
+            "nDCG@10": 0.0
+          }
+        },
+        {
+          "qid": "9",
+          "query": "Verwaltungsvorschriften Reisekostengesetz Hessen",
+          "status": "improved",
+          "baseline_rank": 34,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.029411764705882353,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "10",
+          "query": "Rückforderung überzahlter Reisekosten Landrat",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "11",
+          "query": "Unfallversicherungsschutz Sturz Hotelzimmer Dienstreise",
+          "status": "regressed",
+          "baseline_rank": 1,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "12",
+          "query": "Tagegeld auswärtige Tätigkeit Dienststätte HRKG",
+          "status": "improved",
+          "baseline_rank": 5,
+          "candidate_rank": 2,
+          "baseline_metrics": {
+            "AP": 0.2,
+            "R@100": 1.0,
+            "nDCG@10": 0.38685280723454163
+          },
+          "candidate_metrics": {
+            "AP": 0.5,
+            "R@100": 1.0,
+            "nDCG@10": 0.6309297535714575
+          }
+        },
+        {
+          "qid": "13",
+          "query": "Widerruf Dienstreisegenehmigung Vertrauensschutz",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "14",
+          "query": "Schadensersatz zu Unrecht erstattete Bewirtungskosten",
+          "status": "unchanged",
+          "baseline_rank": 1,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        },
+        {
+          "qid": "15",
+          "query": "Fahrtkostenerstattung Personalratsmitglieder HRKG",
+          "status": "improved",
+          "baseline_rank": 25,
+          "candidate_rank": 1,
+          "baseline_metrics": {
+            "AP": 0.04,
+            "R@100": 1.0,
+            "nDCG@10": 0.0
+          },
+          "candidate_metrics": {
+            "AP": 1.0,
+            "R@100": 1.0,
+            "nDCG@10": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

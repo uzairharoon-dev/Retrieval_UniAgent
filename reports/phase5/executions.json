@@ -1,0 +1,110 @@
+﻿[
+    {
+        "wall_seconds":  214.1823517,
+        "run":  "phase5-passages",
+        "dataset":  "retrieval-de-spot-check",
+        "state":  {
+                      "Status":  "exited",
+                      "Running":  false,
+                      "Paused":  false,
+                      "Restarting":  false,
+                      "OOMKilled":  false,
+                      "Dead":  false,
+                      "Pid":  0,
+                      "ExitCode":  0,
+                      "Error":  "",
+                      "StartedAt":  "2026-10-15T19:11:35.210022407Z",
+                      "FinishedAt":  "2026-10-15T19:15:06.107221212Z"
+                  }
+    },
+    {
+        "wall_seconds":  128.9376301,
+        "run":  "phase5-passages",
+        "dataset":  "retrieval-en-spot-check",
+        "state":  {
+                      "Status":  "exited",
+                      "Running":  false,
+                      "Paused":  false,
+                      "Restarting":  false,
+                      "OOMKilled":  false,
+                      "Dead":  false,
+                      "Pid":  0,
+                      "ExitCode":  0,
+                      "Error":  "",
+                      "StartedAt":  "2026-10-15T19:15:32.002438395Z",
+                      "FinishedAt":  "2026-10-15T19:17:39.222977532Z"
+                  }
+    },
+    {
+        "wall_seconds":  186.010182,
+        "run":  "phase5-passages",
+        "dataset":  "retrieval-hessian-law-de-spot-check",
+        "state":  {
+                      "Status":  "exited",
+                      "Running":  false,
+                      "Paused":  false,
+                      "Restarting":  false,
+                      "OOMKilled":  false,
+                      "Dead":  false,
+                      "Pid":  0,
+                      "ExitCode":  0,
+                      "Error":  "",
+                      "StartedAt":  "2026-10-15T19:17:58.200182867Z",
+                      "FinishedAt":  "2026-10-15T19:20:58.751389181Z"
+                  }
+    },
+    {
+        "wall_seconds":  88.9669852,
+        "run":  "phase5-deduplicated",
+        "dataset":  "retrieval-de-spot-check",
+        "state":  {
+                      "Status":  "exited",
+                      "Running":  false,
+                      "Paused":  false,
+                      "Restarting":  false,
+                      "OOMKilled":  false,
+                      "Dead":  false,
+                      "Pid":  0,
+                      "ExitCode":  0,
+                      "Error":  "",
+                      "StartedAt":  "2026-10-15T19:21:36.632434961Z",
+                      "FinishedAt":  "2026-10-15T19:22:59.383922353Z"
+                  }
+    },
+    {
+        "wall_seconds":  42.196204099999996,
+        "run":  "phase5-deduplicated",
+        "dataset":  "retrieval-en-spot-check",
+        "state":  {
+                      "Status":  "exited",
+                      "Running":  false,
+                      "Paused":  false,
+                      "Restarting":  false,
+                      "OOMKilled":  false,
+                      "Dead":  false,
+                      "Pid":  0,
+                      "ExitCode":  0,
+                      "Error":  "",
+                      "StartedAt":  "2026-10-15T19:23:18.354100968Z",
+                      "FinishedAt":  "2026-10-15T19:23:59.075599544Z"
+                  }
+    },
+    {
+        "wall_seconds":  53.514491299999996,
+        "run":  "phase5-deduplicated",
+        "dataset":  "retrieval-hessian-law-de-spot-check",
+        "state":  {
+                      "Status":  "exited",
+                      "Running":  false,
+                      "Paused":  false,
+                      "Restarting":  false,
+                      "OOMKilled":  false,
+                      "Dead":  false,
+                      "Pid":  0,
+                      "ExitCode":  0,
+                      "Error":  "",
+                      "StartedAt":  "2026-10-15T19:24:17.250367837Z",
+                      "FinishedAt":  "2026-10-15T19:25:09.470151181Z"
+                  }
+    }
+]

@@ -107,7 +107,8 @@ def evaluate(name):
         per_query.setdefault(result.query_id, {})[str(result.measure)] = result.value
     report = {
         "dataset": name,
-        "method": "official PyTerrier BM25 baseline",
+        "method": (json.loads((predictions / "system.json").read_text())["method"]
+                   if (predictions / "system.json").exists() else "official PyTerrier BM25 baseline"),
         "official_evaluation": official_evaluate(predictions, directory, {
             "measures": ["nDCG@10"], "run_format": ["run.txt"], "truth_format": "qrels.txt",
         }),

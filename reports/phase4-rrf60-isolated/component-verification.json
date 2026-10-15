@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "retrieval-de-spot-check",
+    "short_matches_baseline": true,
+    "long_matches_long_token_experiment": true,
+    "fusion_matches_saved_components": true
+  },
+  {
+    "dataset": "retrieval-en-spot-check",
+    "short_matches_baseline": true,
+    "long_matches_long_token_experiment": true,
+    "fusion_matches_saved_components": true
+  },
+  {
+    "dataset": "retrieval-hessian-law-de-spot-check",
+    "short_matches_baseline": true,
+    "long_matches_long_token_experiment": true,
+    "fusion_matches_saved_components": true
+  }
+]

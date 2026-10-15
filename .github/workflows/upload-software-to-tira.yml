@@ -1,0 +1,50 @@
+# Adapted from the UniAgent 2026 TIRA submission template.
+name: Upload Software to TIRA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Set up Python for the TIRA client
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install the tested TIRA client
+        run: python -m pip install tira==0.0.203
+
+      - name: Authenticate to TIRA
+        env:
+          TIRA_CLIENT_TOKEN: ${{ secrets.TIRA_CLIENT_TOKEN }}
+        run: |
+          if [ -z "$TIRA_CLIENT_TOKEN" ]; then
+            echo '::error::Add the TIRA_CLIENT_TOKEN repository secret before running this workflow.'
+            exit 1
+          fi
+          tira-cli login --token "$TIRA_CLIENT_TOKEN"
+
+      - name: Build, test, and upload passage BM25
+        run: |
+          tira-cli code-submission \
+            --path retrieval \
+            --file retrieval/Dockerfile.tira \
+            --task uniagent-2026 \
+            --dataset retrieval-de-spot-check-20260816-training \
+            --platform linux/amd64 \
+            --build-args='--output=type=docker --provenance=false' \
+            --command 'python3 /app/representation_system.py --mode passages --dataset $inputDataset --output $outputDir'
