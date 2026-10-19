@@ -10,10 +10,10 @@ from tira.third_party_integrations import ir_datasets
 from tirex_tracker import tracking
 
 from baseline import RETRIEVAL_CONFIGURATION, configure_token_limit, create_index, detect_query_language
-from representations import CompoundExpander, RepresentationDataset, aggregate_parents
+from representations import CompoundExpander, RepresentationDataset, aggregate_parents, query_text
 
 
-def run(dataset, output, mode):
+def run(dataset, output, mode, use_description=False):
     started = time.perf_counter()
     output.mkdir(parents=True, exist_ok=True)
     language = detect_query_language(dataset)
@@ -28,7 +28,7 @@ def run(dataset, output, mode):
     configure_token_limit(language)
     tokenizer = pt.TerrierTokeniser.java_tokeniser(RETRIEVAL_CONFIGURATION[language]["tokeniser"])
     topics = pd.DataFrame([{"qid": str(query.query_id),
-                            "query": " ".join(tokenizer.getTokens(view.transform(query.default_text())))}
+                            "query": " ".join(tokenizer.getTokens(view.transform(query_text(query, use_description))))}
                            for query in dataset.queries_iter()])
     with tracking(export_file_path=output / "retrieval-ir-metadata.yml"):
         raw = pt.terrier.Retriever(index, wmodel="BM25", num_results=5000 if mode == "passages" else 1000).transform(topics)
@@ -38,7 +38,8 @@ def run(dataset, output, mode):
     (output / "language.txt").write_text(language + "\n", encoding="utf-8")
     (output / "representation-map.json").write_text(json.dumps(view.parent_ids), encoding="utf-8")
     config = {"method": f"BM25 corpus-derived compounds: {mode}", "language": language,
-              "mode": mode, "max_term_length": 64 if language == "de" else 20,
+              "mode": mode, "query_fields": "query+description" if use_description else "query",
+              "max_term_length": 64 if language == "de" else 20,
               "compound_min_document_frequency": 5, "compound_min_part_length": 4,
               "compound_max_parts": 2, "compound_max_word_length": 64,
               "links": ["", "s", "es", "en", "e", "er", "n"],
@@ -58,8 +59,10 @@ def run(dataset, output, mode):
 @click.option("--dataset", required=True)
 @click.option("--output", required=True, type=click.Path(path_type=Path, file_okay=False))
 @click.option("--mode", type=click.Choice(["compound", "deduplicated", "passages"]), required=True)
-def main(dataset, output, mode):
-    run(ir_datasets.load(dataset), output, mode)
+@click.option("--use-description/--no-use-description", default=False, show_default=True,
+              help="Append original_query.description to the keyword query when present.")
+def main(dataset, output, mode, use_description):
+    run(ir_datasets.load(dataset), output, mode, use_description)
 
 
 if __name__ == "__main__":

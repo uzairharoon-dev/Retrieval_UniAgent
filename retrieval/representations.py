@@ -51,6 +51,17 @@ class CompoundExpander:
         return WORD.sub(lambda match: " ".join((match.group(), *self.parts(match.group()))), text)
 
 
+def query_text(query, use_description=False):
+    """Keyword query, optionally followed by `original_query.description` when present."""
+    text = query.default_text()
+    original = getattr(query, "original_query", None)
+    if use_description and isinstance(original, dict):
+        description = original.get("description")
+        if isinstance(description, str) and description.strip():
+            text = f"{text} {description.strip()}"
+    return text
+
+
 @dataclass
 class TextDocument:
     doc_id: str
@@ -61,8 +72,11 @@ class TextDocument:
 
 
 class RepresentationDataset:
-    def __init__(self, dataset, expander, mode):
+    def __init__(self, dataset, expander, mode, keep_texts=False):
         self.dataset, self.expander, self.mode = dataset, expander, mode
+        self.keep_texts = keep_texts
+        # Untransformed representation text (for rerankers), capped at 400 words.
+        self.texts = {}
         self.parent_ids = {}
         self.source_documents = 0
         self.indexed_documents = 0
@@ -84,8 +98,10 @@ class RepresentationDataset:
             identifier = f"d{number}"
             self.parent_ids[identifier] = [parent]
             self.indexed_documents += 1
-            yield TextDocument(identifier, self.transform(text))
             words = text.split()
+            if self.keep_texts:
+                self.texts[identifier] = " ".join(words[:400])
+            yield TextDocument(identifier, self.transform(text))
             if self.mode == "passages" and len(words) > 300:
                 heading = " ".join(text.splitlines()[0].split()[:24])
                 for start in range(0, len(words), 200):
@@ -95,7 +111,10 @@ class RepresentationDataset:
                     identifier = f"d{number}p{start}"
                     self.parent_ids[identifier] = [parent]
                     self.indexed_documents += 1
-                    yield TextDocument(identifier, self.transform(heading + "\n" + " ".join(piece)))
+                    passage = heading + "\n" + " ".join(piece)
+                    if self.keep_texts:
+                        self.texts[identifier] = passage
+                    yield TextDocument(identifier, self.transform(passage))
 
     def queries_iter(self):
         for query in self.dataset.queries_iter():

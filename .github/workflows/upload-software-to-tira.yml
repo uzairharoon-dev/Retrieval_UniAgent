@@ -38,7 +38,7 @@ jobs:
           fi
           tira-cli login --token "$TIRA_CLIENT_TOKEN"
 
-      - name: Build, test, and upload passage BM25
+      - name: Build, test, and upload passage BM25 with query descriptions
         run: |
           tira-cli code-submission \
             --path retrieval \
@@ -47,4 +47,4 @@ jobs:
             --dataset retrieval-de-spot-check-20260816-training \
             --platform linux/amd64 \
             --build-args='--output=type=docker --provenance=false' \
-            --command 'python3 /app/representation_system.py --mode passages --dataset $inputDataset --output $outputDir'
+            --command 'python3 /app/representation_system.py --mode passages --use-description --dataset $inputDataset --output $outputDir'

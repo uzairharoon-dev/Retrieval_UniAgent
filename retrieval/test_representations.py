@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from representations import CompoundExpander, RepresentationDataset, aggregate_parents
+from representations import CompoundExpander, RepresentationDataset, aggregate_parents, query_text
 from representation_system import run
 from test_baseline import persisted_dataset
 
@@ -18,6 +18,21 @@ class RepresentationTest(unittest.TestCase):
                          "Trennungsgeldverordnung trennungsgeld verordnung")
         self.assertEqual(expander.parts("Universitätsbibliothek"), ("universität", "bibliothek"))
         self.assertEqual(expander.expand("Unbekannteswort"), "Unbekannteswort")
+
+    def test_query_text_appends_description_only_when_requested_and_present(self):
+        class Query:
+            def __init__(self, original):
+                self.original_query = original
+
+            def default_text(self):
+                return "Dienstreiseantrag"
+
+        with_description = Query({"language": "de", "description": " Wie beantrage ich eine Dienstreise? "})
+        self.assertEqual(query_text(with_description), "Dienstreiseantrag")
+        self.assertEqual(query_text(with_description, True), "Dienstreiseantrag Wie beantrage ich eine Dienstreise?")
+        self.assertEqual(query_text(Query({"language": "de"}), True), "Dienstreiseantrag")
+        self.assertEqual(query_text(Query({"language": "de", "description": "  "}), True), "Dienstreiseantrag")
+        self.assertEqual(query_text(Query(None), True), "Dienstreiseantrag")
 
     def test_parts_require_document_frequency_not_repetition(self):
         queries = [{"qid": "q", "query": "text", "original_query": {"language": "de"}}]
