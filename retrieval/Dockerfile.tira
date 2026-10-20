@@ -3,6 +3,11 @@ FROM ghcr.io/uniagent-webis-de/uniagent-pyterrier-baseline:dev-0.0.1@sha256:955b
 WORKDIR /app
 # Match the evaluator dependency used in the validated development image.
 RUN pip3 install --no-cache-dir trectools==0.0.50
-COPY baseline.py fusion.py fusion_system.py representations.py representation_system.py german-stopwords.txt german-stopwords.NOTICE test_baseline.py test_token_length.py test_fusion.py test_representations.py /app/
+# CPU-only reranker runtime; the model is baked in because TIRA runs offline.
+RUN pip3 install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch==2.5.1 \
+ && pip3 install --no-cache-dir transformers==4.46.3 sentence-transformers==3.3.1
+RUN python3 -c "from huggingface_hub import snapshot_download; snapshot_download('cross-encoder/mmarco-mMiniLMv2-L12-H384-v1', revision='1427fd652930e4ba29e8149678df786c240d8825', local_dir='/models/reranker', allow_patterns=['*.json', '*.safetensors', 'sentencepiece*', 'tokenizer*'])"
+ENV HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+COPY baseline.py fusion.py fusion_system.py representations.py representation_system.py rerank_system.py german-stopwords.txt german-stopwords.NOTICE test_baseline.py test_token_length.py test_fusion.py test_representations.py /app/
 RUN PYTHONPATH=. pytest .
-ENTRYPOINT ["python3", "/app/representation_system.py", "--mode", "passages", "--use-description"]
+ENTRYPOINT ["python3", "/app/rerank_system.py"]

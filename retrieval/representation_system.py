@@ -32,7 +32,7 @@ def run(dataset, output, mode, use_description=False):
                            for query in dataset.queries_iter()])
     with tracking(export_file_path=output / "retrieval-ir-metadata.yml"):
         raw = pt.terrier.Retriever(index, wmodel="BM25", num_results=5000 if mode == "passages" else 1000).transform(topics)
-        result = aggregate_parents(raw, view.parent_ids)
+        result = aggregate_parents(raw, view.parent_ids, order=view.order)
         pt.io.write_results(result, output / "run.txt.gz")
     index.close()
     (output / "language.txt").write_text(language + "\n", encoding="utf-8")

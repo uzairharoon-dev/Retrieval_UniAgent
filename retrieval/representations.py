@@ -78,6 +78,8 @@ class RepresentationDataset:
         # Untransformed representation text (for rerankers), capped at 400 words.
         self.texts = {}
         self.parent_ids = {}
+        # Corpus position of each source document, used to break score ties.
+        self.order = {}
         self.source_documents = 0
         self.indexed_documents = 0
 
@@ -88,6 +90,7 @@ class RepresentationDataset:
         seen = {}
         for number, document in enumerate(self.dataset.docs_iter()):
             text, parent = document.default_text(), str(document.doc_id)
+            self.order.setdefault(parent, number)
             self.source_documents += 1
             if self.mode == "deduplicated":
                 key = hashlib.sha256(text.encode("utf-8")).hexdigest()
@@ -121,7 +124,8 @@ class RepresentationDataset:
             yield query
 
 
-def aggregate_parents(run, parent_ids, depth=1000):
+def aggregate_parents(run, parent_ids, depth=1000, order=None):
+    """Max score per source document; ties keep corpus order when `order` is given (as Terrier does)."""
     rows = []
     for row in run.itertuples():
         for parent in parent_ids[str(row.docno)]:
@@ -130,7 +134,11 @@ def aggregate_parents(run, parent_ids, depth=1000):
         return pd.DataFrame(columns=["qid", "docno", "score", "rank"])
     result = pd.DataFrame(rows, columns=["qid", "docno", "score"])
     result = result.groupby(["qid", "docno"], as_index=False).score.max()
-    result = result.sort_values(["qid", "score", "docno"], ascending=[True, False, False])
+    if order is not None:
+        result["order"] = result.docno.map(order)
+        result = result.sort_values(["qid", "score", "order"], ascending=[True, False, True]).drop(columns="order")
+    else:
+        result = result.sort_values(["qid", "score", "docno"], ascending=[True, False, False])
     result = result.groupby("qid", sort=False).head(depth).copy()
     result["rank"] = result.groupby("qid").cumcount()
     return result.reset_index(drop=True)

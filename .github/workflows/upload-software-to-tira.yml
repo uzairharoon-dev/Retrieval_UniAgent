@@ -10,7 +10,7 @@ permissions:
 jobs:
   upload:
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
+    timeout-minutes: 75
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -38,7 +38,7 @@ jobs:
           fi
           tira-cli login --token "$TIRA_CLIENT_TOKEN"
 
-      - name: Build, test, and upload passage BM25 with query descriptions
+      - name: Build, test, and upload passage BM25 with cross-encoder reranking
         run: |
           tira-cli code-submission \
             --path retrieval \
@@ -47,4 +47,4 @@ jobs:
             --dataset retrieval-de-spot-check-20260816-training \
             --platform linux/amd64 \
             --build-args='--output=type=docker --provenance=false' \
-            --command 'python3 /app/representation_system.py --mode passages --use-description --dataset $inputDataset --output $outputDir'
+            --command 'python3 /app/rerank_system.py --dataset $inputDataset --output $outputDir'
